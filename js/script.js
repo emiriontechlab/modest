@@ -102,4 +102,46 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => {
         revealObserver.observe(el);
     });
+
+    // 7. About section — animated counters + star rating
+    function animateCounter(el, target, duration, isDecimal) {
+        const start = 0;
+        const startTime = performance.now();
+        function tick(now) {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // ease out cubic
+            const ease = 1 - Math.pow(1 - progress, 3);
+            const current = start + (target - start) * ease;
+            el.textContent = isDecimal ? current.toFixed(1) : Math.floor(current);
+            if (progress < 1) requestAnimationFrame(tick);
+            else el.textContent = isDecimal ? target.toFixed(1) : target;
+        }
+        requestAnimationFrame(tick);
+    }
+
+    function animateStars() {
+        const stars = document.querySelectorAll('#star-row .star');
+        stars.forEach(s => s.classList.add('lit'));
+    }
+
+    const statsBar = document.querySelector('.about-stats-bar');
+    let statsFired = false;
+
+    if (statsBar) {
+        const statsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !statsFired) {
+                    statsFired = true;
+                    animateCounter(document.getElementById('stat-clients'),  500, 2000, false);
+                    animateCounter(document.getElementById('stat-emirates'),   7, 1200, false);
+                    animateCounter(document.getElementById('stat-zones'),     40, 1600, false);
+                    animateCounter(document.getElementById('stat-rating'),   4.9, 1800, true);
+                    setTimeout(animateStars, 600);
+                    statsObserver.disconnect();
+                }
+            });
+        }, { threshold: 0.3 });
+        statsObserver.observe(statsBar);
+    }
 });
