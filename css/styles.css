@@ -1466,33 +1466,165 @@ p { margin-bottom: 1rem; }
    CONTACT PAGE SPECIFIC STYLES
    ========================================================================== */
 
-/* Quick Action Cards */
-.quick-actions {
-    margin-top: -40px; /* Pulls it up slightly over the header */
-    position: relative;
-    z-index: 10;
+   .quick-actions {
+    padding: 56px 0 40px;
 }
-.contact-cards-grid {
+
+.qc-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.qc-header h2 {
+    margin-top: 8px;
+    font-size: 24px;
+}
+
+.qc-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
-.contact-action-card {
-    background: #FFF;
-    padding: 30px 20px;
-    border-radius: var(--border-radius);
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(9, 14, 45, 0.08);
-    display: block;
-    border: 1px solid rgba(9, 14, 45, 0.05);
-}
-.contact-action-card:hover { border-color: var(--brand-red); }
-.contact-action-card .icon { font-size: 32px; margin-bottom: 15px; }
-.contact-action-card h3 { font-size: 18px; margin-bottom: 5px; }
-.contact-action-card p { font-size: 14px; color: var(--text-muted); margin-bottom: 15px; }
-.action-text { font-size: 13px; font-weight: 600; color: var(--brand-navy); }
-.contact-action-card:hover .action-text { color: var(--brand-red); }
 
+.qc-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+    color: var(--brand-navy, #090E2D);
+    border-radius: 16px;
+    padding: 22px 20px;
+    border: 1px solid transparent;
+    transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1),
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.qc-card h3 {
+    font-size: 15.5px;
+    font-weight: 700;
+    margin: 0 0 2px;
+}
+
+.qc-card p {
+    font-size: 12.5px;
+    margin: 0 0 10px;
+    color: rgba(9, 14, 45, 0.6);
+}
+
+.qc-cta {
+    font-size: 12.5px;
+    font-weight: 600;
+    margin-top: auto;
+    transition: letter-spacing 0.2s ease;
+}
+
+.qc-card:hover .qc-cta {
+    letter-spacing: 0.3px;
+}
+
+.qc-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    transition: transform 0.25s ease;
+}
+
+.qc-card:hover .qc-icon {
+    transform: scale(1.08) rotate(-4deg);
+}
+
+.qc-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* WhatsApp — green */
+.qc-card--whatsapp {
+    background: #E9F9EF;
+}
+.qc-card--whatsapp .qc-icon {
+    background: #25D366;
+    color: #fff;
+}
+.qc-card--whatsapp .qc-cta {
+    color: #128C4A;
+}
+.qc-card--whatsapp:hover {
+    border-color: #25D366;
+    box-shadow: 0 12px 28px rgba(37, 211, 102, 0.25);
+    transform: translateY(-4px);
+}
+
+/* Phone — navy/blue */
+.qc-card--phone {
+    background: #EAF0FB;
+}
+.qc-card--phone .qc-icon {
+    background: var(--brand-navy, #1a2a6c);
+    color: #fff;
+}
+.qc-card--phone .qc-cta {
+    color: var(--brand-navy, #1a2a6c);
+}
+.qc-card--phone:hover {
+    border-color: var(--brand-navy, #1a2a6c);
+    box-shadow: 0 12px 28px rgba(26, 42, 108, 0.22);
+    transform: translateY(-4px);
+}
+
+/* Email — purple */
+.qc-card--email {
+    background: #F2EBFB;
+}
+.qc-card--email .qc-icon {
+    background: #7C3AED;
+    color: #fff;
+}
+.qc-card--email .qc-cta {
+    color: #6D28D9;
+}
+.qc-card--email:hover {
+    border-color: #7C3AED;
+    box-shadow: 0 12px 28px rgba(124, 58, 237, 0.22);
+    transform: translateY(-4px);
+}
+
+/* Office — coral/amber */
+.qc-card--office {
+    background: #FDEEE7;
+}
+.qc-card--office .qc-icon {
+    background: #D85A30;
+    color: #fff;
+}
+.qc-card--office .qc-cta {
+    color: #B0451F;
+}
+.qc-card--office:hover {
+    border-color: #D85A30;
+    box-shadow: 0 12px 28px rgba(216, 90, 48, 0.22);
+    transform: translateY(-4px);
+}
+
+@media (max-width: 900px) {
+    .qc-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .qc-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+   
 /* Form Container */
 .form-container {
     background: #FFF;
@@ -1583,12 +1715,9 @@ input:focus, textarea:focus {
 
 /* Responsive Contact Page */
 @media (max-width: 992px) {
-    .contact-cards-grid { grid-template-columns: repeat(2, 1fr); }
     .form-row { grid-template-columns: 1fr; }
 }
 @media (max-width: 576px) {
-    .contact-cards-grid { grid-template-columns: 1fr; }
-    .quick-actions { margin-top: 20px; }
     .form-container, .info-card { padding: 25px 15px; }
 }
 
@@ -2600,4 +2729,70 @@ input:focus, textarea:focus {
 @media (max-width: 480px) {
     .svc-trust-badges { grid-template-columns: 1fr 1fr; gap: 12px; }
     .svc-trust-badge { padding: 20px 12px; }
+}
+
+/* ==========================================================================
+   CONTACT HEADER — HERO OVERRIDE
+   ========================================================================== */
+.hero.contact-header {
+    min-height: 420px;
+}
+
+.hero.contact-header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 5%;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+}
+
+.hero.contact-header h1,
+.hero.contact-header p,
+.hero.contact-header .tag {
+    color: #fff;
+}
+
+.hero.contact-header h1 {
+    font-size: 38px;
+    max-width: 560px;
+}
+
+.hero.contact-header p.subtitle {
+    max-width: 480px;
+    font-size: 16px;
+    opacity: 0.88;
+    margin-bottom: 0;
+}
+
+/* Mobile: stack centered */
+@media (max-width: 768px) {
+    .hero.contact-header {
+        min-height: 320px;
+    }
+
+    .hero.contact-header .container {
+        align-items: flex-start;
+        padding-left: 0;
+        text-align: left;
+    }
+
+    .hero.contact-header h1 {
+        font-size: 26px;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero.contact-header .tag {
+        text-align: left;
+    }
+
+    .hero.contact-header p.subtitle {
+        text-align: left;
+        font-size: 14px;
+        max-width: 100%;
+    }
 }
