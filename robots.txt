@@ -2,4 +2,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap: https://modestuae.co/sitemap.xml
+Sitemap: https://modest-uae.ae/sitemap.xml
