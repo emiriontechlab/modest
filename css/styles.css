@@ -2362,17 +2362,26 @@ input:focus, textarea:focus {
         border-radius: 10px;
         padding: 12px;
         margin-top: 10px;
-        opacity: 1;
-        visibility: visible;
+        /* Reset desktop opacity/visibility — use display instead on mobile */
+        opacity: 1 !important;
+        visibility: visible !important;
         pointer-events: auto;
-        transform: none;
-        display: none;
+        transform: none !important;
+        display: none;          /* JS toggles this to grid via .sub-open */
         grid-template-columns: 1fr 1fr;
         background: linear-gradient(135deg, #f0f4ff 0%, #fef3f3 100%);
     }
 
     .mega-item--has-sub.sub-open .mega-sub-panel {
-        display: grid;
+        display: grid !important;
+    }
+
+    /* Prevent CSS :hover from interfering on touch devices */
+    .mega-item--has-sub:hover .mega-sub-panel {
+        display: none;
+    }
+    .mega-item--has-sub.sub-open:hover .mega-sub-panel {
+        display: grid !important;
     }
 
     .mega-item--has-sub {

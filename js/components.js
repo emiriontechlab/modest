@@ -77,8 +77,7 @@ function initHeaderScripts() {
         });
     });
 
-    // "Other Services" sub-panel toggle (desktop hover handled by CSS)
-    // On mobile: tap the row to expand; on desktop: also clickable
+    // "Other Services" sub-panel toggle (desktop: CSS hover; mobile: JS tap)
     const otherTrigger = document.getElementById('other-services-trigger');
     if (otherTrigger) {
         otherTrigger.addEventListener('click', function (e) {
@@ -86,7 +85,16 @@ function initHeaderScripts() {
             if (e.target.closest('.mega-sub-panel')) return;
             e.preventDefault();
             e.stopPropagation();
-            this.classList.toggle('sub-open');
+
+            const isOpen = this.classList.toggle('sub-open');
+
+            // On mobile, also set display directly to guarantee visibility
+            if (window.innerWidth <= 992) {
+                const subPanel = document.getElementById('other-services-sub');
+                if (subPanel) {
+                    subPanel.style.display = isOpen ? 'grid' : 'none';
+                }
+            }
         });
     }
 
