@@ -77,6 +77,19 @@ function initHeaderScripts() {
         });
     });
 
+    // "Other Services" sub-panel toggle (desktop hover handled by CSS)
+    // On mobile: tap the row to expand; on desktop: also clickable
+    const otherTrigger = document.getElementById('other-services-trigger');
+    if (otherTrigger) {
+        otherTrigger.addEventListener('click', function (e) {
+            // Don't intercept clicks on actual sub-links
+            if (e.target.closest('.mega-sub-panel')) return;
+            e.preventDefault();
+            e.stopPropagation();
+            this.classList.toggle('sub-open');
+        });
+    }
+
     highlightActiveNav();
 }
 

@@ -2208,8 +2208,8 @@ input:focus, textarea:focus {
 
 /* --- 4-Column Mega Menu (Services) --- */
 .mega-dropdown .mega-menu {
-    left: -300px; /* Centers it relative to the nav */
-    width: 900px;
+    left: -260px; /* Centers it relative to the nav */
+    width: 860px;
     padding: 30px;
 }
 
@@ -2217,6 +2217,178 @@ input:focus, textarea:focus {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 Column Grid as requested */
     gap: 20px;
+}
+
+/* Full-width divider inside mega grid */
+.mega-divider {
+    grid-column: 1 / -1;
+    height: 1px;
+    background: rgba(9, 14, 45, 0.08);
+    margin: 4px 0;
+}
+
+/* "Other Services" row highlight */
+.mega-item--other {
+    grid-column: 1 / -1;
+    background: rgba(216, 12, 20, 0.04);
+    border: 1px solid rgba(216, 12, 20, 0.12);
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.mega-item--other:hover {
+    background: rgba(216, 12, 20, 0.09);
+}
+
+/* Sub-caret arrow */
+.sub-caret {
+    font-size: 10px;
+    margin-left: 4px;
+    transition: transform 0.25s ease;
+    display: inline-block;
+}
+
+.mega-item--has-sub.sub-open .sub-caret {
+    transform: rotate(90deg);
+}
+
+/* ── Sub-panel (flyout on desktop, expand on mobile) ── */
+.mega-sub-panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-6px);
+    width: 760px;
+    background: linear-gradient(135deg, #f0f4ff 0%, #fef3f3 100%);
+    border-radius: 16px;
+    box-shadow: 0 16px 48px rgba(9, 14, 45, 0.14);
+    border: 1px solid rgba(216, 12, 20, 0.1);
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+    z-index: 200;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+/* Show on desktop hover OR when JS adds .sub-open */
+.mega-item--has-sub:hover .mega-sub-panel,
+.mega-item--has-sub.sub-open .mega-sub-panel {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.mega-sub-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+    color: var(--text-body);
+    background: rgba(255,255,255,0.6);
+}
+
+.mega-sub-item:hover {
+    background: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(9,14,45,0.09);
+}
+
+.sub-icon {
+    font-size: 18px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(216, 12, 20, 0.1);
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.mega-sub-item strong {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--brand-navy);
+    margin-bottom: 2px;
+}
+
+.mega-sub-item p {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.mega-sub-item--viewall {
+    grid-column: 1 / -1;
+    border-top: 1px solid rgba(216, 12, 20, 0.12);
+    margin-top: 4px;
+    padding-top: 12px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: rgba(216, 12, 20, 0.06);
+}
+
+.mega-sub-item--viewall .sub-icon {
+    font-size: 14px;
+    font-weight: 700;
+    background: rgba(216, 12, 20, 0.15);
+    color: var(--brand-red);
+}
+
+.mega-sub-item--viewall strong {
+    color: var(--brand-red);
+    font-size: 13px;
+}
+
+/* ── Mobile: sub-panel becomes a stacked list ── */
+@media (max-width: 992px) {
+    .mega-sub-panel {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border: 1px solid rgba(216, 12, 20, 0.15);
+        border-radius: 10px;
+        padding: 12px;
+        margin-top: 10px;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: none;
+        display: none;
+        grid-template-columns: 1fr 1fr;
+        background: linear-gradient(135deg, #f0f4ff 0%, #fef3f3 100%);
+    }
+
+    .mega-item--has-sub.sub-open .mega-sub-panel {
+        display: grid;
+    }
+
+    .mega-item--has-sub {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .mega-sub-item--viewall {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 480px) {
+    .mega-sub-panel {
+        grid-template-columns: 1fr;
+    }
 }
 
 .mega-item {

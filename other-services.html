@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Setup Services UAE | Modest Consulting Services FZE</title>
-    <meta name="description" content="Company formation, business licensing, registration amendments, branch setup, share transfers, and company liquidation services across the UAE.">
+    <title>Our Services | Modest Consulting Services FZE UAE</title>
+    <meta name="description" content="Explore our full range of business consulting services in UAE — accounting, audit, VAT, payroll, customs, PRO services, and PCFC compliance.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://modest-uae.ae/services/">
     <link rel="icon" type="image/webp" href="images/Modest-favicon.webp">
@@ -16,8 +16,9 @@
 
     <style>
         /* ====================================================
-           SERVICES PAGE STYLES
+           SERVICES PAGE — CUSTOM STYLES
         ==================================================== */
+
         .srv-hero {
             background: linear-gradient(135deg, #0a1628 0%, #1a2f5e 50%, #0d1f3c 100%);
             padding: 100px 0 80px;
@@ -25,6 +26,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .srv-hero::before {
             content: '';
             position: absolute;
@@ -32,6 +34,7 @@
             background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(79,140,255,0.15) 0%, transparent 70%);
             pointer-events: none;
         }
+
         .srv-hero__tag {
             display: inline-block;
             background: rgba(79,140,255,0.15);
@@ -45,6 +48,7 @@
             text-transform: uppercase;
             margin-bottom: 20px;
         }
+
         .srv-hero h1 {
             font-size: clamp(2rem, 5vw, 3.2rem);
             font-weight: 800;
@@ -52,12 +56,14 @@
             line-height: 1.2;
             margin-bottom: 20px;
         }
+
         .srv-hero h1 span {
             background: linear-gradient(135deg, #4f8cff, #7eb3ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
         .srv-hero p {
             font-size: 1.1rem;
             color: rgba(255,255,255,0.7);
@@ -65,23 +71,27 @@
             margin: 0 auto 36px;
             line-height: 1.7;
         }
+
         .srv-hero__stats {
             display: flex;
             justify-content: center;
             gap: 40px;
             flex-wrap: wrap;
         }
+
         .srv-hero__stat {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 4px;
         }
+
         .srv-hero__stat strong {
             font-size: 1.5rem;
             font-weight: 800;
             color: #fff;
         }
+
         .srv-hero__stat span {
             font-size: 0.8rem;
             color: rgba(255,255,255,0.55);
@@ -89,78 +99,96 @@
             letter-spacing: 0.05em;
         }
 
-        /* SECTION */
+        /* ====================================================
+           SERVICES GRID
+        ==================================================== */
+
         .srv-section {
             padding: 80px 0 100px;
             background: #f8faff;
         }
+
         .srv-section__header {
             text-align: center;
             margin-bottom: 60px;
         }
+
         .srv-section__header h2 {
             font-size: clamp(1.6rem, 3vw, 2.2rem);
             font-weight: 800;
             color: #0d1f3c;
             margin-bottom: 12px;
         }
+
         .srv-section__header p {
             color: #6b7a99;
-            max-width: 560px;
+            max-width: 540px;
             margin: 0 auto;
             font-size: 1rem;
             line-height: 1.6;
         }
 
-        /* GRID */
         .srv-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
             gap: 28px;
         }
 
-        /* CARD */
+        /* ====================================================
+           SERVICE CARD
+        ==================================================== */
+
         .srv-card {
             position: relative;
             background: #fff;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 4px 20px rgba(13,31,60,0.07);
-            transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94),
-                        box-shadow 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                        box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             text-decoration: none;
             display: block;
             transform-style: preserve-3d;
             will-change: transform;
         }
+
         .srv-card:hover {
             transform: translateY(-10px) scale(1.02);
             box-shadow: 0 20px 50px rgba(13,31,60,0.15), 0 0 0 1px rgba(79,140,255,0.12);
         }
+
+        /* Image area */
         .srv-card__img-wrap {
             position: relative;
             height: 210px;
             overflow: hidden;
         }
+
         .srv-card__img-wrap img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
+
         .srv-card:hover .srv-card__img-wrap img {
             transform: scale(1.08);
         }
+
+        /* Gradient overlay on image */
         .srv-card__img-wrap::after {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(to bottom, transparent 40%, rgba(13,31,60,0.65) 100%);
+            background: linear-gradient(to bottom, transparent 40%, rgba(13,31,60,0.7) 100%);
             transition: opacity 0.4s;
         }
+
         .srv-card:hover .srv-card__img-wrap::after {
             opacity: 0.85;
         }
+
+        /* Tag on image */
         .srv-card__badge {
             position: absolute;
             top: 16px;
@@ -176,6 +204,8 @@
             border-radius: 50px;
             backdrop-filter: blur(8px);
         }
+
+        /* Arrow on image */
         .srv-card__arrow {
             position: absolute;
             bottom: 16px;
@@ -194,14 +224,18 @@
             transition: background 0.3s, transform 0.3s;
             backdrop-filter: blur(8px);
         }
+
         .srv-card:hover .srv-card__arrow {
             background: #4f8cff;
             border-color: #4f8cff;
-            transform: translate(3px,-3px);
+            transform: translate(3px, -3px);
         }
+
+        /* Body */
         .srv-card__body {
             padding: 24px 26px 28px;
         }
+
         .srv-card__icon {
             width: 46px;
             height: 46px;
@@ -214,10 +248,12 @@
             margin-bottom: 14px;
             transition: transform 0.3s, background 0.3s;
         }
+
         .srv-card:hover .srv-card__icon {
             transform: scale(1.1) rotate(-5deg);
             background: linear-gradient(135deg, #4f8cff, #7eb3ff);
         }
+
         .srv-card__title {
             font-size: 1.08rem;
             font-weight: 700;
@@ -226,15 +262,18 @@
             line-height: 1.3;
             transition: color 0.3s;
         }
+
         .srv-card:hover .srv-card__title {
             color: #4f8cff;
         }
+
         .srv-card__desc {
             font-size: 0.9rem;
             color: #6b7a99;
             line-height: 1.65;
             margin-bottom: 18px;
         }
+
         .srv-card__link {
             display: inline-flex;
             align-items: center;
@@ -244,9 +283,12 @@
             color: #4f8cff;
             transition: gap 0.3s;
         }
+
         .srv-card:hover .srv-card__link {
             gap: 10px;
         }
+
+        /* Shimmer effect on hover */
         .srv-card::before {
             content: '';
             position: absolute;
@@ -259,106 +301,15 @@
             pointer-events: none;
             z-index: 1;
         }
+
         .srv-card:hover::before {
             left: 150%;
         }
 
-        /* OTHER SERVICES CARD */
-        .srv-other {
-            background: linear-gradient(135deg, #0d1f3c 0%, #1a2f5e 100%);
-            border-radius: 20px;
-            padding: 32px 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 320px;
-            text-decoration: none;
-            box-shadow: 0 4px 20px rgba(13,31,60,0.15);
-            transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94),
-                        box-shadow 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
-            position: relative;
-            overflow: hidden;
-        }
-        .srv-other::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(ellipse 80% 80% at 30% 20%, rgba(79,140,255,0.12) 0%, transparent 70%);
-            pointer-events: none;
-        }
-        .srv-other:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 50px rgba(13,31,60,0.3);
-        }
-        .srv-other__tag {
-            display: inline-block;
-            background: rgba(79,140,255,0.2);
-            border: 1px solid rgba(79,140,255,0.35);
-            color: #7eb3ff;
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            padding: 5px 12px;
-            border-radius: 50px;
-            margin-bottom: 20px;
-            width: fit-content;
-        }
-        .srv-other__icon {
-            font-size: 2.5rem;
-            margin-bottom: 16px;
-        }
-        .srv-other__title {
-            font-size: 1.3rem;
-            font-weight: 800;
-            color: #fff;
-            margin-bottom: 12px;
-            line-height: 1.3;
-        }
-        .srv-other__desc {
-            font-size: 0.88rem;
-            color: rgba(255,255,255,0.6);
-            line-height: 1.65;
-            margin-bottom: 24px;
-            flex: 1;
-        }
-        .srv-other__list {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 24px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        .srv-other__list li {
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.12);
-            color: rgba(255,255,255,0.75);
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 4px 10px;
-            border-radius: 50px;
-        }
-        .srv-other__cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #4f8cff;
-            color: #fff;
-            font-size: 0.88rem;
-            font-weight: 700;
-            padding: 12px 22px;
-            border-radius: 50px;
-            text-decoration: none;
-            width: fit-content;
-            transition: background 0.3s, gap 0.3s;
-        }
-        .srv-other:hover .srv-other__cta {
-            background: #3a7aee;
-            gap: 12px;
-        }
+        /* ====================================================
+           CTA STRIP
+        ==================================================== */
 
-        /* CTA STRIP */
         .srv-cta {
             background: linear-gradient(135deg, #0a1628 0%, #1a2f5e 100%);
             padding: 70px 0;
@@ -366,23 +317,27 @@
             position: relative;
             overflow: hidden;
         }
+
         .srv-cta::before {
             content: '';
             position: absolute;
             inset: 0;
             background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(79,140,255,0.12) 0%, transparent 70%);
         }
+
         .srv-cta h2 {
             font-size: clamp(1.5rem, 3vw, 2rem);
             font-weight: 800;
             color: #fff;
             margin-bottom: 12px;
         }
+
         .srv-cta p {
             color: rgba(255,255,255,0.65);
             margin-bottom: 32px;
             font-size: 1rem;
         }
+
         .srv-cta .btn-group {
             display: flex;
             justify-content: center;
@@ -390,6 +345,7 @@
             gap: 16px;
             flex-wrap: wrap;
         }
+
         .srv-cta__phone {
             color: rgba(255,255,255,0.8);
             font-size: 1.05rem;
@@ -397,19 +353,42 @@
             text-decoration: none;
             transition: color 0.3s;
         }
-        .srv-cta__phone:hover { color: #fff; }
+
+        .srv-cta__phone:hover {
+            color: #fff;
+        }
+
+        /* ====================================================
+           RESPONSIVE
+        ==================================================== */
 
         @media (max-width: 768px) {
-            .srv-hero { padding: 70px 0 60px; }
-            .srv-hero__stats { gap: 24px; }
-            .srv-section { padding: 60px 0 70px; }
-            .srv-grid { grid-template-columns: 1fr; gap: 20px; }
-            .srv-card__img-wrap { height: 190px; }
-            .srv-other { min-height: auto; }
+            .srv-hero {
+                padding: 70px 0 60px;
+            }
+
+            .srv-hero__stats {
+                gap: 24px;
+            }
+
+            .srv-section {
+                padding: 60px 0 70px;
+            }
+
+            .srv-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .srv-card__img-wrap {
+                height: 190px;
+            }
         }
+
         @media (max-width: 480px) {
-            .srv-card__body { padding: 20px; }
-            .srv-other { padding: 24px 20px; }
+            .srv-card__body {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -417,6 +396,7 @@
 
 <div id="header-placeholder"></div>
 
+<!-- BREADCRUMB -->
 <div class="breadcrumb-bar">
     <div class="container">
         <a href="index.html">Home</a> › Services
@@ -427,151 +407,150 @@
      HERO
 ======================================================= -->
 <section class="srv-hero">
-    <div class="container" style="position:relative;z-index:1;">
+    <div class="container">
         <span class="srv-hero__tag">Our Services</span>
-        <h1>Business Setup & Advisory Services in UAE — <span>End-to-End Support</span></h1>
-        <p>From company formation and licensing to amendments, branch setup, share transfers, and liquidation — Modest Consulting Services FZE manages every stage of your business lifecycle in the UAE.</p>
+        <h1>Business Consulting Services in UAE — <span>Built for Growth & Compliance</span></h1>
+        <p>From company formation and licensing to accounting, audit, VAT, payroll, and government services — Modest Consulting Services FZE covers every stage of your business in the UAE.</p>
         <div class="srv-hero__stats">
-            <div class="srv-hero__stat"><strong>500+</strong><span>Clients Served</span></div>
-            <div class="srv-hero__stat"><strong>4.9★</strong><span>Google Rating</span></div>
-            <div class="srv-hero__stat"><strong>All UAE</strong><span>Jurisdictions</span></div>
-            <div class="srv-hero__stat"><strong>DET</strong><span>Licensed</span></div>
+            <div class="srv-hero__stat">
+                <strong>500+</strong>
+                <span>Clients Served</span>
+            </div>
+            <div class="srv-hero__stat">
+                <strong>4.9★</strong>
+                <span>Google Rating</span>
+            </div>
+            <div class="srv-hero__stat">
+                <strong>All UAE</strong>
+                <span>Jurisdictions</span>
+            </div>
+            <div class="srv-hero__stat">
+                <strong>DET</strong>
+                <span>Licensed</span>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- ======================================================
-     MAIN SIX SERVICES
+     SERVICES GRID
 ======================================================= -->
 <section class="srv-section">
     <div class="container">
         <div class="srv-section__header">
-            <span class="tag">Core Services</span>
-            <h2>Business Setup Services</h2>
-            <p>Everything you need to form, manage, and evolve your UAE company — handled correctly from day one.</p>
+            <span class="tag">What we do</span>
+            <h2>Services available for your UAE business</h2>
+            <p>Each service is handled end-to-end by a dedicated specialist — no hand-offs, no confusion, no delays.</p>
         </div>
 
         <div class="srv-grid">
 
-            <!-- 1. Company Formation -->
-            <a href="company-formation.html" class="srv-card">
+            <!-- 1. Accounting & Bookkeeping -->
+            <a href="accounting-bookkeeping.html" class="srv-card">
                 <div class="srv-card__img-wrap">
-                    <img src="images/service1-company-formation-banner-Dubai skyline.webp" alt="Company formation services UAE — Dubai skyline Modest Consulting Services" loading="lazy">
-                    <span class="srv-card__badge">Company Formation</span>
+                    <img src="images/service9-accounting/Clean minimal desk with an open laptop showing a financial dashboard (1).webp" alt="Accounting and bookkeeping services UAE — Modest Consulting Services Dubai" loading="lazy">
+                    <span class="srv-card__badge">Accounting</span>
                     <span class="srv-card__arrow">→</span>
                 </div>
                 <div class="srv-card__body">
-                    <div class="srv-card__icon">🏢</div>
-                    <h3 class="srv-card__title">Company Formation</h3>
-                    <p class="srv-card__desc">Set up your mainland LLC, free zone company, or offshore entity in the UAE. We handle name reservation, MoA drafting, authority submissions, and license issuance — end to end.</p>
+                    <div class="srv-card__icon">📒</div>
+                    <h3 class="srv-card__title">Accounting & Bookkeeping</h3>
+                    <p class="srv-card__desc">Monthly bookkeeping, bank reconciliation, financial statements, and audit-ready records — delivered by the 10th of every month for mainland and free zone companies across the UAE.</p>
                     <span class="srv-card__link">Explore service →</span>
                 </div>
             </a>
 
-            <!-- 2. Business Licensing -->
-            <a href="bookkeeping-accounting.html" class="srv-card">
+            <!-- 2. Audit & Assurance -->
+            <a href="audit-assurance.html" class="srv-card">
                 <div class="srv-card__img-wrap">
-                    <img src="images/uae_trade_license_final.webp" alt="Business licensing services UAE — trade license application Modest Consulting Services" loading="lazy">
-                    <span class="srv-card__badge">Business Licensing</span>
+                    <img src="images/service10-audit/Two auditors at a meeting table reviewing a large printed (2).webp" alt="Audit and assurance services UAE — certified auditors Modest Consulting Services" loading="lazy">
+                    <span class="srv-card__badge">Audit</span>
                     <span class="srv-card__arrow">→</span>
                 </div>
                 <div class="srv-card__body">
                     <div class="srv-card__icon">📋</div>
-                    <h3 class="srv-card__title">Business Licensing</h3>
-                    <p class="srv-card__desc">New trade license applications, activity approvals, annual renewals, and amendments for mainland and free zone companies — submitted correctly to DET, ADDED, SEDD, and all major free zone authorities.</p>
+                    <h3 class="srv-card__title">Audit & Assurance</h3>
+                    <p class="srv-card__desc">Independent statutory, internal, compliance, and due diligence audit reports accepted by DMCC, JAFZA, DAFZA, IFZA, SHAMS, RAKEZ, UAE banks, and investors — delivered before every deadline.</p>
                     <span class="srv-card__link">Explore service →</span>
                 </div>
             </a>
 
-            <!-- 3. Registration Amendments -->
-            <a href="registration-amendments.html" class="srv-card">
+            <!-- 3. VAT Registration & Filing -->
+            <a href="vat-registration-filing.html" class="srv-card">
                 <div class="srv-card__img-wrap">
-                    <img src="images/service3-registrations/consultant reviewing a company amendment application (2).webp" alt="Registration amendments UAE — trade name activity shareholder changes Modest Consulting Services" loading="lazy">
-                    <span class="srv-card__badge">Amendments</span>
+                    <img src="images/service11-vatreg/Open laptop on a professional desk showing the UAE (2).webp" alt="VAT registration and filing services UAE — FTA compliant Modest Consulting Services" loading="lazy">
+                    <span class="srv-card__badge">VAT</span>
                     <span class="srv-card__arrow">→</span>
                 </div>
                 <div class="srv-card__body">
-                    <div class="srv-card__icon">✏️</div>
-                    <h3 class="srv-card__title">Registration Amendments</h3>
-                    <p class="srv-card__desc">Trade name changes, business activity additions, shareholder amendments, manager updates, address changes, and legal structure conversions — completed in 3 to 7 working days.</p>
+                    <div class="srv-card__icon">🧾</div>
+                    <h3 class="srv-card__title">VAT Registration & Filing</h3>
+                    <p class="srv-card__desc">FTA registration, quarterly return filing, voluntary disclosures, VAT health checks, and refund applications — ensuring your business stays fully FTA-compliant with zero late filing penalties.</p>
                     <span class="srv-card__link">Explore service →</span>
                 </div>
             </a>
 
-            <!-- 4. Branch Formation -->
-            <a href="branch-formation.html" class="srv-card">
+            <!-- 4. Payroll & WPS Compliance -->
+            <a href="payroll-wps-compliance.html" class="srv-card">
                 <div class="srv-card__img-wrap">
-                    <img src="images/service4-branchtransfer/Modern Dubai office building exterior (1).webp" alt="Branch formation UAE — branch company setup Dubai Modest Consulting Services" loading="lazy">
-                    <span class="srv-card__badge">Branch Formation</span>
+                    <img src="images/service12-payroll/HR professional or payroll accountant at a clean desk (2).webp" alt="Payroll and WPS compliance services UAE — Modest Consulting Services" loading="lazy">
+                    <span class="srv-card__badge">Payroll</span>
                     <span class="srv-card__arrow">→</span>
                 </div>
                 <div class="srv-card__body">
-                    <div class="srv-card__icon">🌐</div>
-                    <h3 class="srv-card__title">Branch Formation</h3>
-                    <p class="srv-card__desc">Set up a UAE branch of your local or international company — including Ministry of Economy registration, trade license issuance, parent company document attestation, and local agent arrangement where required.</p>
+                    <div class="srv-card__icon">👥</div>
+                    <h3 class="srv-card__title">Payroll & WPS Compliance</h3>
+                    <p class="srv-card__desc">Accurate salary processing, WPS SIF file preparation and submission, payslips, gratuity calculations, and full MOHRE compliance — delivered on time every single month.</p>
                     <span class="srv-card__link">Explore service →</span>
                 </div>
             </a>
 
-            <!-- 5. Share Transfers -->
-            <a href="share-transfers.html" class="srv-card">
+            <!-- 5. PRO & Government Services -->
+            <a href="pro-government-services.html" class="srv-card">
                 <div class="srv-card__img-wrap">
-                    <img src="images/service5-sharetransfer/Two professionals at a meeting table (1).webp" alt="Share transfer services UAE — company ownership transfer Modest Consulting Services" loading="lazy">
-                    <span class="srv-card__badge">Share Transfers</span>
+                    <img src="images/service8-progov/Certified PRO officer or business consultant standing (1).webp" alt="PRO and government services Dubai — certified liaison Modest Consulting Services" loading="lazy">
+                    <span class="srv-card__badge">PRO Services</span>
                     <span class="srv-card__arrow">→</span>
                 </div>
                 <div class="srv-card__body">
-                    <div class="srv-card__icon">🤝</div>
-                    <h3 class="srv-card__title">Share Transfers</h3>
-                    <p class="srv-card__desc">Partial and full share transfers, new shareholder additions, shareholder removals, corporate shareholder additions, and inheritance transfers — all legally compliant and authority-approved.</p>
+                    <div class="srv-card__icon">🏛️</div>
+                    <h3 class="srv-card__title">PRO & Government Services</h3>
+                    <p class="srv-card__desc">Visa processing, Emirates ID, trade license renewals, labour cards, document attestation, and all government authority submissions — managed by certified PRO officers so you never visit a queue.</p>
                     <span class="srv-card__link">Explore service →</span>
                 </div>
             </a>
 
-            <!-- 6. Company Liquidation -->
-            <a href="company-liquidation.html" class="srv-card">
+            <!-- 6. Customs Audit & Trade Compliance -->
+            <a href="customs-audit-trade-compliance.html" class="srv-card">
                 <div class="srv-card__img-wrap">
-                    <img src="images/service6-companyliquidation/Professional reviewing a company deregistration certificate.webp" alt="Company liquidation services UAE — business closure deregistration Modest Consulting Services" loading="lazy">
-                    <span class="srv-card__badge">Liquidation</span>
+                    <img src="images/service13-customsaudit/Customs specialist reviewing.webp" alt="Customs audit and trade compliance services UAE — Modest Consulting Services" loading="lazy">
+                    <span class="srv-card__badge">Customs Audit</span>
                     <span class="srv-card__arrow">→</span>
                 </div>
                 <div class="srv-card__body">
-                    <div class="srv-card__icon">🔒</div>
-                    <h3 class="srv-card__title">Company Liquidation</h3>
-                    <p class="srv-card__desc">End-to-end company closure — authority approvals, public notice publication, employee visa cancellations, creditor settlements, and official deregistration for mainland and free zone companies.</p>
+                    <div class="srv-card__icon">🚢</div>
+                    <h3 class="srv-card__title">Customs Audit & Trade Compliance</h3>
+                    <p class="srv-card__desc">HS code classification review, customs duty audit, duty drawback and refund claims, and full FCA audit representation — helping UAE importers and exporters recover overpaid duties and stay FCA-compliant.</p>
+                    <span class="srv-card__link">Explore service →</span>
+                </div>
+            </a>
+
+            <!-- 7. PCFC & Trakhees Services -->
+            <a href="pcfc-trakhees-services.html" class="srv-card">
+                <div class="srv-card__img-wrap">
+                    <img src="images/service7-pcfc/Jebel Ali Port aerial view or PCFC zone exterior (2).webp" alt="PCFC and Trakhees services Dubai — JAFZA licensing Modest Consulting Services" loading="lazy">
+                    <span class="srv-card__badge">PCFC & Trakhees</span>
+                    <span class="srv-card__arrow">→</span>
+                </div>
+                <div class="srv-card__body">
+                    <div class="srv-card__icon">🏗️</div>
+                    <h3 class="srv-card__title">PCFC & Trakhees Services</h3>
+                    <p class="srv-card__desc">JAFZA company licensing, Trakhees commercial licensing, EHS compliance, civil engineering approvals, and PCFC license renewals and amendments — managed by specialists with direct PCFC and Trakhees experience.</p>
                     <span class="srv-card__link">Explore service →</span>
                 </div>
             </a>
 
         </div>
-
-        <!-- OTHER SERVICES CATEGORY -->
-        <div style="margin-top: 50px;">
-            <div class="srv-section__header" style="margin-bottom: 28px;">
-                <span class="tag">More Services</span>
-                <h2>Other Professional Services</h2>
-                <p>Accounting, audit, VAT, payroll, customs compliance, PRO services, and PCFC — all under one roof.</p>
-            </div>
-            <a href="other-services.html" class="srv-other">
-                <div>
-                    <span class="srv-other__tag">Explore All</span>
-                    <div class="srv-other__icon">⚡</div>
-                    <h3 class="srv-other__title">Accounting, Audit, VAT, Payroll, Customs & More</h3>
-                    <p class="srv-other__desc">Our full range of compliance, financial, and government services — built for businesses that need more than just setup support.</p>
-                    <ul class="srv-other__list">
-                        <li>Accounting & Bookkeeping</li>
-                        <li>Audit & Assurance</li>
-                        <li>VAT Registration & Filing</li>
-                        <li>Payroll & WPS Compliance</li>
-                        <li>PRO & Government Services</li>
-                        <li>Customs Audit & Trade Compliance</li>
-                        <li>PCFC & Trakhees Services</li>
-                    </ul>
-                </div>
-                <span class="srv-other__cta">View all other services →</span>
-            </a>
-        </div>
-
     </div>
 </section>
 
@@ -580,7 +559,7 @@
 ======================================================= -->
 <section class="srv-cta">
     <div class="container" style="position:relative;z-index:1;">
-        <h2>Not sure where to start? Talk to Modest UAE today.</h2>
+        <h2>Not sure which service you need? Talk to Modest UAE today.</h2>
         <p>One free consultation. We assess your situation and recommend exactly what your business needs.</p>
         <div class="btn-group">
             <a href="contact.html" class="btn btn-primary">Book Free Consultation</a>
@@ -593,7 +572,9 @@
 
 <script src="js/components.js"></script>
 <script src="js/script.js"></script>
+
 <script>
+    // 3D tilt effect on cards
     document.querySelectorAll('.srv-card').forEach(card => {
         card.addEventListener('mousemove', e => {
             const rect = card.getBoundingClientRect();
@@ -605,14 +586,17 @@
             const rotY = ((x - cx) / cx) * 6;
             card.style.transform = `translateY(-10px) scale(1.02) rotateX(${rotX}deg) rotateY(${rotY}deg)`;
         });
+
         card.addEventListener('mouseleave', () => {
             card.style.transform = '';
-            card.style.transition = 'transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.4s';
+            card.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s';
         });
+
         card.addEventListener('mouseenter', () => {
             card.style.transition = 'transform 0.15s ease, box-shadow 0.4s';
         });
     });
 </script>
+
 </body>
 </html>
