@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Setup Services in Dubai &amp; UAE | Modest Consulting Services FZE</title>
+    <meta name="description" content="Launch your business in UAE with complete business setup solutions — company formation, PRO services, accounting, VAT, payroll, audit and customs consulting. Contact Modest Consulting Services today.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://modest-uae.ae/services/">
+    <link rel="icon" type="image/webp" href="images/Modest-favicon.webp">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+
+/* ============================================================
+   SERVICE-INDIVIDUAL.HTML — PAGE STYLES
+   Blue & White brand theme matching Modest Consulting
+   ============================================================ */
+
+/* ---------- BREADCRUMB ---------- */
+.breadcrumb-bar {
+    background: var(--bg-alt);
+    padding: 10px 0;
+    font-size: 13px;
+    color: var(--text-muted);
+    border-bottom: 1px solid rgba(9,14,45,.06);
+}
+.breadcrumb-bar a { color: var(--text-muted); }
+.breadcrumb-bar a:hover { color: var(--brand-red); }
+
+/* ---------- SERVICES HERO ---------- */
+.si-hero {
+    background: linear-gradient(135deg, #090E2D 0%, #131A3A 60%, #1a2550 100%);
+    padding: 80px 0 70px;
+    position: relative;
+    overflow: hidden;
+}
+.si-hero::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 420px; height: 420px;
+    border-radius: 50%;
+    background: rgba(216,12,20,.07);
+    pointer-events: none;
+}
+.si-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -120px; left: -60px;
+    width: 350px; height: 350px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.03);
+    pointer-events: none;
+}
+.si-hero__inner {
+    position: relative;
+    z-index: 2;
+    max-width: 820px;
+}
+.si-hero__tag {
+    display: inline-block;
+    background: rgba(216,12,20,.15);
+    border: 1px solid rgba(216,12,20,.3);
+    color: #ff6b74;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+.si-hero h1 {
+    color: #fff;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.si-hero__lead {
+    color: rgba(255,255,255,.82);
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    max-width: 700px;
+}
+.si-hero__sub {
+    color: rgba(255,255,255,.6);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    max-width: 640px;
+}
+.si-hero .btn-group { flex-wrap: wrap; gap: 12px; margin-top: 0; }
+.si-hero .btn-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #25D366;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all .3s ease;
+}
+.si-hero .btn-wa:hover { background: #1ebe5a; transform: translateY(-2px); }
+.si-hero .btn-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1.5px solid rgba(255,255,255,.4);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all .3s ease;
+}
+.si-hero .btn-call:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.7); }
+
+/* ---------- WHY MODEST SECTION ---------- */
+.si-why {
+    padding: 80px 0;
+    background: #fff;
+}
+.si-why__intro {
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+.si-why__intro p { color: var(--text-body); font-size: 16px; line-height: 1.75; }
+.si-why__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+.si-why__card {
+    background: var(--bg-alt);
+    border-radius: 16px;
+    padding: 32px 24px;
+    border-top: 3px solid transparent;
+    transition: all .3s ease;
+}
+.si-why__card:hover {
+    border-top-color: var(--brand-red);
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(9,14,45,.1);
+    background: #fff;
+}
+.si-why__icon {
+    width: 52px; height: 52px;
+    background: var(--brand-navy);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    margin-bottom: 18px;
+    color: #fff;
+}
+.si-why__card h3 { font-size: 16px; font-weight: 700; color: var(--brand-navy); margin-bottom: 10px; }
+.si-why__card p { font-size: 14px; color: var(--text-body); line-height: 1.65; margin: 0; }
+
+/* ---------- SERVICES SECTIONS ---------- */
+.si-services {
+    padding: 80px 0;
+    background: var(--bg-alt);
+}
+.si-services__header { max-width: 700px; margin-bottom: 50px; }
+.si-services__sub-heading {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--brand-red);
+    margin: 48px 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.si-services__sub-heading::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(9,14,45,.12);
+}
+.si-services__intro-line {
+    color: var(--text-body);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+    max-width: 740px;
+}
+
+/* Service cards grid */
+.si-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.si-card {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid rgba(9,14,45,.07);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    transition: all .3s cubic-bezier(.25,.8,.25,1);
+    position: relative;
+    overflow: hidden;
+}
+.si-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--brand-navy), var(--brand-red));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .35s ease;
+}
+.si-card:hover::before { transform: scaleX(1); }
+.si-card:hover {
+    box-shadow: 0 20px 50px rgba(9,14,45,.12);
+    transform: translateY(-4px);
+}
+.si-card__icon {
+    width: 54px; height: 54px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--brand-navy) 0%, #1a2550 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px;
+    margin-bottom: 18px;
+    color: #fff;
+    flex-shrink: 0;
+}
+.si-card__label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--brand-red);
+    margin-bottom: 6px;
+}
+.si-card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--brand-navy);
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+.si-card__desc {
+    color: var(--text-body);
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 14px;
+    flex: 1;
+}
+.si-card__best-for {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    line-height: 1.55;
+}
+.si-card__best-for strong { color: var(--brand-navy); }
+.si-card__features {
+    list-style: none;
+    padding: 0; margin: 0 0 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.si-card__features li {
+    font-size: 13px;
+    color: var(--text-body);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.45;
+}
+.si-card__features li i {
+    color: #22c55e;
+    font-size: 12px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+.si-card__timeline {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--brand-navy);
+    background: rgba(9,14,45,.05);
+    padding: 7px 12px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.si-card__timeline i { color: var(--brand-red); }
+.si-card__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--brand-red);
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: auto;
+    transition: gap .2s ease;
+}
+.si-card:hover .si-card__cta { gap: 10px; }
+
+/* ---------- HOW TO CHOOSE SECTION ---------- */
+.si-choose {
+    padding: 80px 0;
+    background: #fff;
+}
+.si-choose__header { max-width: 680px; margin-bottom: 48px; }
+.si-choose__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.si-choose__item {
+    background: var(--bg-alt);
+    border-radius: 14px;
+    padding: 26px 22px;
+    border-left: 4px solid transparent;
+    transition: all .3s ease;
+}
+.si-choose__item:hover {
+    border-left-color: var(--brand-red);
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(9,14,45,.08);
+    transform: translateX(4px);
+}
+.si-choose__item-icon {
+    width: 40px; height: 40px;
+    background: var(--brand-navy);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff;
+    font-size: 17px;
+    margin-bottom: 14px;
+}
+.si-choose__item h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand-navy);
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+.si-choose__item p {
+    font-size: 13px;
+    color: var(--text-body);
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+.si-choose__item a {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--brand-red);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: gap .2s;
+}
+.si-choose__item:hover a { gap: 7px; }
+
+/* ---------- HOW IT WORKS ---------- */
+.si-process {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #090E2D 0%, #131A3A 100%);
+}
+.si-process .tag { color: #ff9ca2; }
+.si-process h2 { color: #fff; margin-bottom: 48px; }
+.si-process__steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+}
+.si-process__steps::before {
+    content: '';
+    position: absolute;
+    top: 36px;
+    left: calc(12.5% + 20px);
+    right: calc(12.5% + 20px);
+    height: 2px;
+    background: rgba(255,255,255,.15);
+    z-index: 0;
+}
+.si-process__step {
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+.si-process__num {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--brand-red), #90050a);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(216,12,20,.4);
+    border: 3px solid rgba(255,255,255,.15);
+}
+.si-process__step h3 { color: #fff; font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+.si-process__step p { color: rgba(255,255,255,.65); font-size: 13px; line-height: 1.6; margin: 0 0 8px; }
+.si-process__timeline-badge {
+    display: inline-block;
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.2);
+    color: rgba(255,255,255,.8);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+/* ---------- TRUST BADGES ---------- */
+.si-trust {
+    padding: 70px 0;
+    background: var(--bg-alt);
+}
+.si-trust h2 { margin-bottom: 40px; }
+.si-trust__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+}
+.si-trust__badge {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px 14px;
+    text-align: center;
+    border: 1px solid rgba(9,14,45,.07);
+    transition: all .3s ease;
+}
+.si-trust__badge:hover {
+    box-shadow: 0 12px 30px rgba(9,14,45,.1);
+    transform: translateY(-4px);
+    border-color: rgba(216,12,20,.2);
+}
+.si-trust__badge-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+    display: block;
+    color: var(--brand-navy);
+}
+.si-trust__badge-num {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--brand-navy);
+    display: block;
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+.si-trust__badge-text {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* ---------- REVIEWS ---------- */
+.si-reviews {
+    padding: 80px 0;
+    background: #fff;
+}
+.si-reviews__header { margin-bottom: 16px; }
+.si-reviews__rating-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+.si-reviews__stars { color: #FFB800; font-size: 20px; letter-spacing: 2px; }
+.si-reviews__score { font-size: 28px; font-weight: 800; color: var(--brand-navy); }
+.si-reviews__count { font-size: 14px; color: var(--text-muted); }
+.si-reviews__link {
+    margin-left: auto;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--brand-red);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.si-reviews__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.si-review-card {
+    background: var(--bg-alt);
+    border-radius: 16px;
+    padding: 28px;
+    border: 1px solid rgba(9,14,45,.06);
+    transition: all .3s ease;
+}
+.si-review-card:hover {
+    box-shadow: 0 12px 32px rgba(9,14,45,.09);
+    transform: translateY(-3px);
+    background: #fff;
+}
+.si-review-card__stars { color: #FFB800; font-size: 14px; margin-bottom: 14px; }
+.si-review-card blockquote {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-body);
+    font-style: italic;
+    margin: 0 0 18px;
+    padding: 0;
+    border: none;
+}
+.si-review-card__author strong { font-size: 14px; color: var(--brand-navy); display: block; }
+.si-review-card__author span { font-size: 12px; color: var(--text-muted); }
+
+/* ---------- FAQ ---------- */
+.si-faq { padding: 80px 0; background: var(--bg-alt); }
+.si-faq__header { max-width: 640px; margin-bottom: 40px; }
+
+/* ---------- CONTACT FORM ---------- */
+.si-contact {
+    padding: 80px 0;
+    background: #fff;
+}
+.si-contact__grid {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 60px;
+    align-items: start;
+}
+.si-contact__form-card {
+    background: var(--bg-alt);
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid rgba(9,14,45,.07);
+}
+.si-form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+.si-form__group { margin-bottom: 18px; }
+.si-form__group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--brand-navy);
+    margin-bottom: 6px;
+}
+.si-form__group input,
+.si-form__group textarea,
+.si-form__group select {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid rgba(9,14,45,.12);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--text-body);
+    background: #fff;
+    transition: border-color .2s;
+    outline: none;
+}
+.si-form__group input:focus,
+.si-form__group textarea:focus { border-color: var(--brand-navy); box-shadow: 0 0 0 3px rgba(9,14,45,.07); }
+.si-form__group textarea { resize: vertical; min-height: 100px; }
+.si-form__pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.si-form__pill {
+    cursor: pointer;
+    padding: 6px 14px;
+    border-radius: 30px;
+    border: 1.5px solid rgba(9,14,45,.15);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-body);
+    background: #fff;
+    transition: all .2s;
+    user-select: none;
+}
+.si-form__pill.active,
+.si-form__pill:hover {
+    border-color: var(--brand-navy);
+    background: var(--brand-navy);
+    color: #fff;
+}
+.si-form__consent { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+.si-form__consent input[type="checkbox"] { margin-top: 2px; flex-shrink: 0; }
+.si-form__submit {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, var(--brand-red), #90050a);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .3s;
+    margin-top: 8px;
+    font-family: inherit;
+    letter-spacing: .3px;
+}
+.si-form__submit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(216,12,20,.35); }
+.si-form__helper { font-size: 12px; color: var(--text-muted); margin-top: 8px; text-align: center; }
+.si-contact__info h3 { font-size: 17px; color: var(--brand-navy); margin-bottom: 24px; }
+.si-contact__quick-links { display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px; }
+.si-contact__quick-link {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 18px;
+    background: var(--bg-alt);
+    border-radius: 12px;
+    border: 1px solid rgba(9,14,45,.07);
+    transition: all .25s ease;
+    text-decoration: none;
+}
+.si-contact__quick-link:hover { box-shadow: 0 8px 20px rgba(9,14,45,.08); transform: translateX(4px); }
+.si-contact__quick-link-icon {
+    width: 42px; height: 42px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+.si-contact__quick-link-icon.phone { background: rgba(9,14,45,.08); color: var(--brand-navy); }
+.si-contact__quick-link-icon.wa { background: rgba(37,211,102,.1); color: #25D366; }
+.si-contact__quick-link-icon.email { background: rgba(216,12,20,.08); color: var(--brand-red); }
+.si-contact__quick-link-icon.book { background: rgba(9,14,45,.08); color: var(--brand-navy); }
+.si-contact__quick-link strong { display: block; font-size: 13px; font-weight: 700; color: var(--brand-navy); }
+.si-contact__quick-link span { font-size: 12px; color: var(--text-muted); }
+.si-hours { background: var(--bg-alt); border-radius: 14px; padding: 22px; border: 1px solid rgba(9,14,45,.07); }
+.si-hours h4 { font-size: 13px; font-weight: 700; color: var(--brand-navy); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+.si-hours__row { display: flex; justify-content: space-between; padding: 7px 0; font-size: 13px; border-bottom: 1px solid rgba(9,14,45,.06); }
+.si-hours__row:last-child { border: none; }
+.si-hours__day { color: var(--text-muted); font-weight: 500; }
+.si-hours__time { color: var(--brand-navy); font-weight: 600; }
+.si-hours__time.closed { color: var(--text-muted); }
+
+/* ---------- BOTTOM CTA ---------- */
+.si-bottom-cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #090E2D 0%, #131A3A 60%, #1a2550 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.si-bottom-cta::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: 50%;
+    transform: translateX(-50%);
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: rgba(216,12,20,.05);
+    pointer-events: none;
+}
+.si-bottom-cta h2 { color: #fff; font-size: 30px; margin-bottom: 12px; }
+.si-bottom-cta p { color: rgba(255,255,255,.65); margin-bottom: 32px; font-size: 16px; }
+.si-bottom-cta .btn-group { justify-content: center; }
+.si-bottom-cta .btn-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1.5px solid rgba(255,255,255,.4);
+    color: #fff;
+    padding: 13px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all .3s ease;
+}
+.si-bottom-cta .btn-call:hover { background: rgba(255,255,255,.1); }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1200px) {
+    .si-trust__grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 1024px) {
+    .si-why__grid { grid-template-columns: repeat(2, 1fr); }
+    .si-cards-grid { grid-template-columns: repeat(2, 1fr); }
+    .si-choose__grid { grid-template-columns: repeat(2, 1fr); }
+    .si-process__steps { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+    .si-process__steps::before { display: none; }
+    .si-contact__grid { grid-template-columns: 1fr; }
+    .si-contact__info { order: -1; }
+    .si-contact__quick-links { display: grid; grid-template-columns: 1fr 1fr; }
+    .si-reviews__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+    .si-hero h1 { font-size: 26px; }
+    .si-hero__lead { font-size: 15px; }
+    .si-cards-grid { grid-template-columns: 1fr; }
+    .si-choose__grid { grid-template-columns: 1fr; }
+    .si-process__steps { grid-template-columns: 1fr; }
+    .si-trust__grid { grid-template-columns: repeat(2, 1fr); }
+    .si-reviews__grid { grid-template-columns: 1fr; }
+    .si-form__row { grid-template-columns: 1fr; }
+    .si-contact__quick-links { grid-template-columns: 1fr; }
+    .si-reviews__link { margin-left: 0; }
+    .si-bottom-cta h2 { font-size: 22px; }
+}
+@media (max-width: 480px) {
+    .si-hero { padding: 50px 0 45px; }
+    .si-why__grid { grid-template-columns: 1fr; }
+    .si-trust__grid { grid-template-columns: repeat(2, 1fr); }
+    .si-contact__form-card { padding: 24px 16px; }
+}
+    </style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb-bar">
+    <div class="container">
+        <a href="index.html">Home</a> › Services
+    </div>
+</div>
+
+<!-- ============================================================
+     SECTION 1 — HERO
+     ============================================================ -->
+<section class="si-hero">
+    <div class="container">
+        <div class="si-hero__inner">
+            <span class="si-hero__tag">Licensed UAE Business Consultancy</span>
+            <h1>Business Setup &amp; Corporate Services in UAE — Modest Consulting Services FZE</h1>
+            <p class="si-hero__lead">We are a licensed UAE business setup consultancy based in Dubai. Our team of certified PRO officers, legal advisors, accountants, and compliance specialists manages your entire business journey — from your first trade license to your annual filings, your staff visas to your VAT returns.</p>
+            <p class="si-hero__sub">One consultancy. One point of contact. Every service your business needs.</p>
+            <div class="btn-group">
+                <a href="contact.html" class="btn btn-primary"><i class="fas fa-calendar-check" style="margin-right:7px;"></i>Book Free Consultation</a>
+                <a href="tel:+971564045802" class="btn-call"><i class="fas fa-phone"></i> +971 56 404 5802</a>
+                <a href="https://wa.me/971564045802" class="btn-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 2 — WHY MODEST
+     ============================================================ -->
+<section class="si-why">
+    <div class="container">
+        <div class="si-why__intro">
+            <span class="tag">Why Modest Consulting Services FZE</span>
+            <h2>Why handle everything through one consultancy?</h2>
+            <p>Most businesses in UAE use a different provider for company formation, another for PRO services, another for accounting, and another for VAT. That means four different contacts, four different invoices, and four different teams who do not talk to each other.</p>
+            <p>Modest Consulting Services replaces all of them with a single point of contact who knows your business completely.</p>
+        </div>
+        <div class="si-why__grid">
+            <div class="si-why__card">
+                <div class="si-why__icon"><i class="fas fa-bolt"></i></div>
+                <h3>Save Time</h3>
+                <p>No briefing four different teams on your business every time you need something. One consultant knows your company, your history, and your requirements from day one.</p>
+            </div>
+            <div class="si-why__card">
+                <div class="si-why__icon"><i class="fas fa-tag"></i></div>
+                <h3>Save Money</h3>
+                <p>Bundled services cost less than hiring four separate providers. Ask us about our combined service packages.</p>
+            </div>
+            <div class="si-why__card">
+                <div class="si-why__icon"><i class="fas fa-check-circle"></i></div>
+                <h3>Zero Coordination Headaches</h3>
+                <p>Your PRO, accountant, and VAT consultant are all on the same team. They coordinate internally — you just get results.</p>
+            </div>
+            <div class="si-why__card">
+                <div class="si-why__icon"><i class="fas fa-user-tie"></i></div>
+                <h3>One Dedicated Consultant</h3>
+                <p>Every Modest Consulting Services client has one assigned consultant who manages all their services. Direct WhatsApp access, no call centres, no handoffs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 3 — CORE SERVICES
+     ============================================================ -->
+<section class="si-services">
+    <div class="container">
+        <div class="si-services__header">
+            <span class="tag">Our Services</span>
+            <h2>Choose the service your business needs — or talk to us and we will recommend the right one</h2>
+        </div>
+
+        <div class="si-cards-grid">
+
+            <!-- Card 1: Company Formation -->
+            <div class="si-card">
+                <div class="si-card__icon"><i class="fas fa-building"></i></div>
+                <span class="si-card__label">Corporate Setup</span>
+                <h3>Company Formation &amp; Corporate Services</h3>
+                <p class="si-card__desc">We set up your company in UAE — mainland, free zone, or offshore. From structure advisory and trade name registration to license delivery and post-setup support.</p>
+                <p class="si-card__best-for"><strong>Best for:</strong> First-time entrepreneurs, foreign investors, SMEs expanding into UAE, and existing businesses opening a new entity.</p>
+                <ul class="si-card__features">
+                    <li><i class="fas fa-check"></i> Business structure advisory — LLC, sole establishment, branch, or free zone</li>
+                    <li><i class="fas fa-check"></i> Trade name search and registration</li>
+                    <li><i class="fas fa-check"></i> Trade license application and delivery</li>
+                    <li><i class="fas fa-check"></i> Ejari or virtual office address arrangement</li>
+                    <li><i class="fas fa-check"></i> Investor and employee visa support</li>
+                    <li><i class="fas fa-check"></i> Bank account opening guidance</li>
+                </ul>
+                <div class="si-card__timeline"><i class="fas fa-clock"></i> 5–10 days mainland &nbsp;|&nbsp; 2–5 days free zone</div>
+                <a href="company-formation.html" class="si-card__cta">Explore Company Formation <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Card 2: Business Licensing -->
+            <div class="si-card">
+                <div class="si-card__icon"><i class="fas fa-file-contract"></i></div>
+                <span class="si-card__label">Licensing</span>
+                <h3>Business Licensing</h3>
+                <p class="si-card__desc">We handle all aspects of your UAE trade license — new applications, annual renewals, activity modifications, and upgrades across all seven emirates.</p>
+                <p class="si-card__best-for"><strong>Best for:</strong> Any business that needs a new trade license, wants to renew an existing one, or needs to modify their licensed activities.</p>
+                <ul class="si-card__features">
+                    <li><i class="fas fa-check"></i> Commercial, professional, industrial, and tourism licenses</li>
+                    <li><i class="fas fa-check"></i> Activity code selection and approval</li>
+                    <li><i class="fas fa-check"></i> Trade name search and registration</li>
+                    <li><i class="fas fa-check"></i> Annual license renewal before expiry</li>
+                    <li><i class="fas fa-check"></i> License activity modification and upgrade</li>
+                    <li><i class="fas fa-check"></i> Full coverage — DET, ADDED, SEDD, and all free zones</li>
+                </ul>
+                <div class="si-card__timeline"><i class="fas fa-clock"></i> New 5–10 days &nbsp;|&nbsp; Renewal 1–3 days &nbsp;|&nbsp; Modification 3–5 days</div>
+                <a href="business-licensing.html" class="si-card__cta">Explore Business Licensing <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Card 3: Registration Amendments -->
+            <div class="si-card">
+                <div class="si-card__icon"><i class="fas fa-edit"></i></div>
+                <span class="si-card__label">Amendments</span>
+                <h3>Registration Amendments</h3>
+                <p class="si-card__desc">We handle every type of change to your existing UAE company registration — trade name changes, activity additions, shareholder amendments, and address updates.</p>
+                <p class="si-card__best-for"><strong>Best for:</strong> Any UAE company that needs to update its trade license, legal structure, shareholders, activities, or registered details.</p>
+                <ul class="si-card__features">
+                    <li><i class="fas fa-check"></i> Trade name change — new name search and registration</li>
+                    <li><i class="fas fa-check"></i> Business activity addition or removal</li>
+                    <li><i class="fas fa-check"></i> Shareholder and partner amendments</li>
+                    <li><i class="fas fa-check"></i> Manager and authorised signatory changes</li>
+                    <li><i class="fas fa-check"></i> Company address change and Ejari update</li>
+                    <li><i class="fas fa-check"></i> Share capital increase or decrease</li>
+                </ul>
+                <div class="si-card__timeline"><i class="fas fa-clock"></i> 3–7 working days depending on amendment type</div>
+                <a href="registration-amendments.html" class="si-card__cta">Explore Registration Amendments <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Card 4: Branch Formation -->
+            <div class="si-card">
+                <div class="si-card__icon"><i class="fas fa-sitemap"></i></div>
+                <span class="si-card__label">Branch Expansion</span>
+                <h3>Branch Formation</h3>
+                <p class="si-card__desc">We manage complete branch office formation for existing local UAE companies expanding into new emirates and international companies establishing their first UAE presence.</p>
+                <p class="si-card__best-for"><strong>Best for:</strong> Established UAE companies expanding into new emirates and international companies entering the UAE market under their existing brand.</p>
+                <ul class="si-card__features">
+                    <li><i class="fas fa-check"></i> Foreign company branch registration with MOE</li>
+                    <li><i class="fas fa-check"></i> Local UAE company branch in another emirate</li>
+                    <li><i class="fas fa-check"></i> Free zone company branch on UAE mainland</li>
+                    <li><i class="fas fa-check"></i> Parent company document attestation guidance</li>
+                    <li><i class="fas fa-check"></i> National service agent arrangement where required</li>
+                    <li><i class="fas fa-check"></i> Branch trade license application and issuance</li>
+                </ul>
+                <div class="si-card__timeline"><i class="fas fa-clock"></i> 10–20 working days depending on branch type</div>
+                <a href="branch-formation.html" class="si-card__cta">Explore Branch Formation <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Card 5: Share Transfers -->
+            <div class="si-card">
+                <div class="si-card__icon"><i class="fas fa-exchange-alt"></i></div>
+                <span class="si-card__label">Ownership Changes</span>
+                <h3>Share Transfers</h3>
+                <p class="si-card__desc">We manage all aspects of share transfer and ownership change for UAE mainland and free zone companies — documentation, authority approvals, and regulatory compliance.</p>
+                <p class="si-card__best-for"><strong>Best for:</strong> UAE companies where ownership is changing — whether buying, selling, gifting, or restructuring shares between shareholders.</p>
+                <ul class="si-card__features">
+                    <li><i class="fas fa-check"></i> Share sale and purchase agreement preparation</li>
+                    <li><i class="fas fa-check"></i> Gift of shares documentation</li>
+                    <li><i class="fas fa-check"></i> Shareholder resolution and board approval</li>
+                    <li><i class="fas fa-check"></i> Authority submission — DET, DMCC, JAFZA, IFZA</li>
+                    <li><i class="fas fa-check"></i> Updated trade license and MOA issuance</li>
+                    <li><i class="fas fa-check"></i> Notification to relevant regulatory bodies</li>
+                </ul>
+                <div class="si-card__timeline"><i class="fas fa-clock"></i> 5–10 working days depending on jurisdiction</div>
+                <a href="share-transfers.html" class="si-card__cta">Explore Share Transfers <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Card 6: Company Liquidation -->
+            <div class="si-card">
+                <div class="si-card__icon"><i class="fas fa-power-off"></i></div>
+                <span class="si-card__label">Business Closure</span>
+                <h3>Company Liquidation</h3>
+                <p class="si-card__desc">We manage voluntary and mandatory company closure for UAE mainland, free zone, and offshore companies — full legal compliance, authority approvals, and deregistration.</p>
+                <p class="si-card__best-for"><strong>Best for:</strong> Any UAE company that has decided to cease operations and wants to close legally — avoiding ongoing license fees and authority penalties.</p>
+                <ul class="si-card__features">
+                    <li><i class="fas fa-check"></i> Voluntary liquidation process management</li>
+                    <li><i class="fas fa-check"></i> Liquidator appointment and authority notification</li>
+                    <li><i class="fas fa-check"></i> Creditor notice and settlement management</li>
+                    <li><i class="fas fa-check"></i> Visa cancellation for all employees and investors</li>
+                    <li><i class="fas fa-check"></i> MOE and authority deregistration</li>
+                    <li><i class="fas fa-check"></i> Final certificate of deregistration</li>
+                </ul>
+                <div class="si-card__timeline"><i class="fas fa-clock"></i> Mainland 60–90 days &nbsp;|&nbsp; Free zone 30–60 days</div>
+                <a href="company-liquidation.html" class="si-card__cta">Explore Company Liquidation <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+        </div><!-- /si-cards-grid core -->
+
+        <!-- OTHER CORPORATE SUPPORT SERVICES -->
+        <div class="si-services__sub-heading">Other Corporate Support Services</div>
+        <p class="si-services__intro-line">Alongside our core company setup services, Modest Consulting Services provides a full range of ongoing corporate support services to keep your business compliant, financially organised, and government-ready at all times.</p>
+
+        <div class="si-cards-grid">
+
+            <!-- Card 7: PRO Services -->
+            <div class="si-card">
+                <div class="si-card__icon"><i class="fas fa-id-card"></i></div>
+                <span class="si-card__label">Government Services</span>
+                <h3>PRO &amp; Government Services</h3>
+                <p class="si-card__desc">Our certified PRO team visits government authorities on your behalf — handling all visa processing, Emirates ID, trade license renewals, and document clearing.</p>
+                <p class="si-card__best-for"><strong>Best for:</strong> Any UAE business that needs government documents processed — from a solo entrepreneur renewing a visa to a company processing 50 work permits.</p>
+                <ul class="si-card__features">
+                    <li><i class="fas fa-check"></i> Investor, employment, family, and visit visa processing</li>
+                    <li><i class="fas fa-check"></i> Emirates ID new applications, renewals, and replacements</li>
+                    <li><i class="fas fa-check"></i> Trade license renewal — submitted before expiry with reminders</li>
+                    <li><i class="fas fa-check"></i> Medical fitness test booking and attendance</li>
+                    <li><i class="fas fa-check"></i> Labour card and work permit — MOHRE submissions</li>
+                    <li><i class="fas fa-check"></i> Document attestation, notarisation, and translation</li>
+                </ul>
+                <div class="si-card__timeline"><i class="fas fa-clock"></i> Visa 5–7 days &nbsp;|&nbsp; License renewal 1–3 days &nbsp;|&nbsp; Attestation 2–5 days</div>
+                <a href="pro-government-services.html" class="si-card__cta">Explore PRO &amp; Government Services <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Card 8: Accounting -->
+            <div class="si-card">
+                <div class="si-card__icon"><i class="fas fa-book-open"></i></div>
+                <span class="si-card__label">Finance</span>
+                <h3>Accounting &amp; Bookkeeping</h3>
+                <p class="si-card__desc">We maintain your company's financial records every month — recording all transactions, reconciling bank accounts, and preparing financial statements. Your books stay clean, accurate, and audit-ready.</p>
+                <p class="si-card__best-for"><strong>Best for:</strong> Any UAE business that wants accurate monthly accounts without hiring a full-time in-house accountant — from a one-person freelance setup to a 50-employee trading company.</p>
+                <ul class="si-card__features">
+                    <li><i class="fas fa-check"></i> Monthly bookkeeping — all transactions recorded and categorised</li>
+                    <li><i class="fas fa-check"></i> Bank reconciliation — every account balanced monthly</li>
+                    <li><i class="fas fa-check"></i> P&amp;L, balance sheet, and cash flow statements</li>
+                    <li><i class="fas fa-check"></i> Accounts payable and receivable management</li>
+                    <li><i class="fas fa-check"></i> Audit support — all documentation prepared</li>
+                    <li><i class="fas fa-check"></i> Cloud accounting software access</li>
+                </ul>
+                <div class="si-card__timeline"><i class="fas fa-clock"></i> Ongoing monthly &nbsp;|&nbsp; Reports by 10th of every month</div>
+                <a href="accounting-bookkeeping.html" class="si-card__cta">Explore Accounting &amp; Bookkeeping <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Card 9: Audit -->
+            <div class="si-card">
+                <div class="si-card__icon"><i class="fas fa-clipboard-check"></i></div>
+                <span class="si-card__label">Assurance</span>
+                <h3>Audit &amp; Assurance</h3>
+                <p class="si-card__desc">An independent, certified review of your company's financial statements. Required annually by most free zone authorities and recommended for all UAE businesses seeking bank finance or investor funding.</p>
+                <p class="si-card__best-for"><strong>Best for:</strong> Free zone companies with mandatory audit requirements, mainland companies seeking bank facilities, businesses preparing for investment.</p>
+                <ul class="si-card__features">
+                    <li><i class="fas fa-check"></i> Statutory audit — mandatory annual audit for free zone companies</li>
+                    <li><i class="fas fa-check"></i> Internal audit — independent review of financial controls</li>
+                    <li><i class="fas fa-check"></i> Compliance audit — MOE, FTA, and authority verification</li>
+                    <li><i class="fas fa-check"></i> Free zone audit — DMCC, IFZA, SHAMS, RAKEZ, JAFZA</li>
+                    <li><i class="fas fa-check"></i> Due diligence audit — investor and acquisition-ready review</li>
+                    <li><i class="fas fa-check"></i> Special purpose audit — bank submissions and tenders</li>
+                </ul>
+                <div class="si-card__timeline"><i class="fas fa-clock"></i> Standard statutory audit 5–15 working days</div>
+                <a href="audit-assurance.html" class="si-card__cta">Explore Audit &amp; Assurance <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Card 10: VAT -->
+            <div class="si-card">
+                <div class="si-card__icon"><i class="fas fa-receipt"></i></div>
+                <span class="si-card__label">Tax Compliance</span>
+                <h3>VAT Registration &amp; Filing</h3>
+                <p class="si-card__desc">UAE introduced VAT at 5% in 2018. Any business with taxable supplies above AED 375,000 per year must register with the FTA and file quarterly returns. We handle the entire VAT process.</p>
+                <p class="si-card__best-for"><strong>Best for:</strong> Any UAE business that is VAT-registered or approaching the AED 375,000 mandatory registration threshold.</p>
+                <ul class="si-card__features">
+                    <li><i class="fas fa-check"></i> FTA VAT registration — mandatory and voluntary</li>
+                    <li><i class="fas fa-check"></i> Quarterly VAT return preparation and filing — accurate, on time</li>
+                    <li><i class="fas fa-check"></i> VAT refund applications submitted to FTA</li>
+                    <li><i class="fas fa-check"></i> VAT health check — full review of your current VAT position</li>
+                    <li><i class="fas fa-check"></i> Voluntary disclosure — correction of past errors</li>
+                    <li><i class="fas fa-check"></i> Ongoing VAT advisory — input tax recovery and zero-rated supplies</li>
+                </ul>
+                <div class="si-card__timeline"><i class="fas fa-clock"></i> Registration 3–5 days &nbsp;|&nbsp; Returns before every quarterly deadline</div>
+                <a href="vat-registration-filing.html" class="si-card__cta">Explore VAT Registration &amp; Filing <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Card 11: Payroll -->
+            <div class="si-card">
+                <div class="si-card__icon"><i class="fas fa-users"></i></div>
+                <span class="si-card__label">HR &amp; Payroll</span>
+                <h3>Payroll &amp; WPS Compliance</h3>
+                <p class="si-card__desc">We process your entire payroll every month — salary calculations, WPS file preparation and submission, payslip generation, gratuity calculations, and MOHRE compliance.</p>
+                <p class="si-card__best-for"><strong>Best for:</strong> Any UAE business with employees — from a 2-person startup to a 100-person trading company. Particularly valuable for avoiding WPS violations.</p>
+                <ul class="si-card__features">
+                    <li><i class="fas fa-check"></i> Monthly salary processing — gross to net, all allowances</li>
+                    <li><i class="fas fa-check"></i> WPS file preparation and bank submission every month</li>
+                    <li><i class="fas fa-check"></i> Professional payslips — English or Arabic</li>
+                    <li><i class="fas fa-check"></i> Gratuity calculation correct under UAE Labour Law</li>
+                    <li><i class="fas fa-check"></i> Annual leave and sick leave tracking</li>
+                    <li><i class="fas fa-check"></i> MOHRE and labour law compliance</li>
+                </ul>
+                <div class="si-card__timeline"><i class="fas fa-clock"></i> Ongoing monthly &nbsp;|&nbsp; WPS submitted 3 days before payday</div>
+                <a href="payroll-wps-compliance.html" class="si-card__cta">Explore Payroll &amp; WPS Compliance <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Card 12: Customs -->
+            <div class="si-card">
+                <div class="si-card__icon"><i class="fas fa-ship"></i></div>
+                <span class="si-card__label">Trade Compliance</span>
+                <h3>Customs Audit &amp; Trade Compliance</h3>
+                <p class="si-card__desc">We audit your import and export declarations, review your HS codes and declared values, identify overpaid duties, and represent you if the Federal Customs Authority selects you for an audit.</p>
+                <p class="si-card__best-for"><strong>Best for:</strong> Importers, exporters, trading companies, logistics businesses, and any UAE entity that moves goods across UAE borders.</p>
+                <ul class="si-card__features">
+                    <li><i class="fas fa-check"></i> Customs duty audit — full review of declarations and HS codes</li>
+                    <li><i class="fas fa-check"></i> HS code classification review — verify all tariff codes</li>
+                    <li><i class="fas fa-check"></i> Customs valuation review against UAE Customs Law</li>
+                    <li><i class="fas fa-check"></i> Import and export compliance review</li>
+                    <li><i class="fas fa-check"></i> Duty drawback and refund claims</li>
+                    <li><i class="fas fa-check"></i> FCA audit representation — full response management</li>
+                </ul>
+                <div class="si-card__timeline"><i class="fas fa-clock"></i> Standard customs audit review 5–15 working days</div>
+                <a href="customs-audit-trade-compliance.html" class="si-card__cta">Explore Customs Audit &amp; Trade Compliance <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+        </div><!-- /si-cards-grid other -->
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 4 — HOW TO CHOOSE
+     ============================================================ -->
+<section class="si-choose">
+    <div class="container">
+        <div class="si-choose__header">
+            <span class="tag">Not sure where to start?</span>
+            <h2>How do you know which service you need?</h2>
+            <p style="color:var(--text-body);font-size:15px;line-height:1.7;margin-top:10px;">Not every business needs every service. Here is a simple guide to help you identify what applies to your situation right now.</p>
+        </div>
+        <div class="si-choose__grid">
+
+            <div class="si-choose__item">
+                <div class="si-choose__item-icon"><i class="fas fa-building"></i></div>
+                <h3>You need Company Formation if:</h3>
+                <p>You are starting a new business in UAE. You are a foreign investor entering the UAE market for the first time. You are an existing business owner adding a new company or expanding into a new jurisdiction.</p>
+                <a href="company-formation.html">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="si-choose__item">
+                <div class="si-choose__item-icon"><i class="fas fa-file-contract"></i></div>
+                <h3>You need Business Licensing if:</h3>
+                <p>You need a trade license for a new activity. Your existing license is up for renewal. You want to add, remove, or change your licensed business activities. You are unsure what license type applies to your business.</p>
+                <a href="business-licensing.html">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="si-choose__item">
+                <div class="si-choose__item-icon"><i class="fas fa-edit"></i></div>
+                <h3>You need Registration Amendments if:</h3>
+                <p>Your company trade name has changed. You want to add a new business partner or remove an existing one. You are moving your registered office to a new address. You need to add a new activity to your existing license.</p>
+                <a href="registration-amendments.html">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="si-choose__item">
+                <div class="si-choose__item-icon"><i class="fas fa-sitemap"></i></div>
+                <h3>You need Branch Formation if:</h3>
+                <p>You have an existing UAE company and want to expand into another emirate. You run an international company and want to establish a registered UAE presence. You have a free zone company and want to trade on the UAE mainland.</p>
+                <a href="branch-formation.html">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="si-choose__item">
+                <div class="si-choose__item-icon"><i class="fas fa-exchange-alt"></i></div>
+                <h3>You need Share Transfers if:</h3>
+                <p>Ownership of your company is changing — a partner is joining, leaving, or selling their stake. You want to restructure equity between existing shareholders. You are buying or selling a UAE company.</p>
+                <a href="share-transfers.html">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="si-choose__item">
+                <div class="si-choose__item-icon"><i class="fas fa-power-off"></i></div>
+                <h3>You need Company Liquidation if:</h3>
+                <p>Your business has ceased trading and you want to close it legally. You want to avoid accumulating license renewal fees, visa complications, and authority penalties on a business that is no longer operating.</p>
+                <a href="company-liquidation.html">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="si-choose__item">
+                <div class="si-choose__item-icon"><i class="fas fa-id-card"></i></div>
+                <h3>You need PRO &amp; Government Services if:</h3>
+                <p>You have employees or partners who need UAE visas, Emirates IDs, or work permits. Your trade license is coming up for renewal. You have documents that need government attestation or translation.</p>
+                <a href="pro-government-services.html">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="si-choose__item">
+                <div class="si-choose__item-icon"><i class="fas fa-book-open"></i></div>
+                <h3>You need Accounting &amp; Bookkeeping if:</h3>
+                <p>You do not have a dedicated in-house accountant and your financial records are not being maintained monthly. You are approaching audit season and your books are not ready. Your bank or free zone authority has asked for audited accounts.</p>
+                <a href="accounting-bookkeeping.html">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="si-choose__item">
+                <div class="si-choose__item-icon"><i class="fas fa-clipboard-check"></i></div>
+                <h3>You need Audit &amp; Assurance if:</h3>
+                <p>Your free zone authority requires an annual statutory audit — DMCC, IFZA, SHAMS, JAFZA, RAKEZ do. You are applying for a bank loan or investor funding. You are planning to sell or merge your company.</p>
+                <a href="audit-assurance.html">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="si-choose__item">
+                <div class="si-choose__item-icon"><i class="fas fa-receipt"></i></div>
+                <h3>You need VAT Registration &amp; Filing if:</h3>
+                <p>Your business turnover is approaching or has exceeded AED 375,000 per year. You are already VAT-registered but not filing returns correctly or on time. You have made past VAT errors and are concerned about FTA penalties.</p>
+                <a href="vat-registration-filing.html">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="si-choose__item">
+                <div class="si-choose__item-icon"><i class="fas fa-users"></i></div>
+                <h3>You need Payroll &amp; WPS Compliance if:</h3>
+                <p>You have employees on your payroll and are responsible for WPS submissions every month. You are struggling to process payroll accurately in-house or have received MOHRE warnings.</p>
+                <a href="payroll-wps-compliance.html">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="si-choose__item">
+                <div class="si-choose__item-icon"><i class="fas fa-ship"></i></div>
+                <h3>You need Customs Audit &amp; Trade Compliance if:</h3>
+                <p>Your business imports or exports goods regularly and you are unsure if your HS codes and declared values are correct. You have received a notice from the Federal Customs Authority. You suspect you have been overpaying customs duties.</p>
+                <a href="customs-audit-trade-compliance.html">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 5 — HOW IT WORKS
+     ============================================================ -->
+<section class="si-process">
+    <div class="container">
+        <span class="tag">How it works</span>
+        <h2>How do you get started with Modest Consulting Services FZE?</h2>
+        <div class="si-process__steps">
+
+            <div class="si-process__step">
+                <div class="si-process__num">1</div>
+                <h3>Contact Us</h3>
+                <p>Call, WhatsApp, or fill the form below. Tell us what you need — or describe your situation and we will tell you what you need.</p>
+                <span class="si-process__timeline-badge"><i class="fas fa-clock" style="margin-right:5px;"></i>We respond within 1 business hour</span>
+            </div>
+
+            <div class="si-process__step">
+                <div class="si-process__num">2</div>
+                <h3>Free Consultation</h3>
+                <p>A dedicated consultant reviews your requirement and gives you a clear recommendation — which service, which jurisdiction, what documents, what it costs, how long it takes.</p>
+                <span class="si-process__timeline-badge"><i class="fas fa-clock" style="margin-right:5px;"></i>Same day or next business day</span>
+            </div>
+
+            <div class="si-process__step">
+                <div class="si-process__num">3</div>
+                <h3>We Take Over</h3>
+                <p>Once you confirm, your consultant handles everything. Document collection, authority submissions, follow-ups, and approvals — all managed for you.</p>
+                <span class="si-process__timeline-badge"><i class="fas fa-clock" style="margin-right:5px;"></i>Formation 5–10 days | PRO 5–7 days | VAT 3–5 days</span>
+            </div>
+
+            <div class="si-process__step">
+                <div class="si-process__num">4</div>
+                <h3>Delivered to You</h3>
+                <p>Your deliverable — trade license, visa, financial report, VAT certificate, audit report — is delivered directly to you. We stay available for follow-up support.</p>
+                <span class="si-process__timeline-badge"><i class="fas fa-clock" style="margin-right:5px;"></i>Ongoing relationship, not a one-time transaction</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 6 — TRUST BADGES
+     ============================================================ -->
+<section class="si-trust">
+    <div class="container">
+        <span class="tag">Trusted &amp; Licensed</span>
+        <h2>Why clients trust Modest Consulting Services FZE with their business</h2>
+        <div class="si-trust__grid">
+
+            <div class="si-trust__badge">
+                <span class="si-trust__badge-icon"><i class="fas fa-certificate"></i></span>
+                <span class="si-trust__badge-num">DET</span>
+                <span class="si-trust__badge-text">Licensed — Dept of Economy &amp; Tourism Dubai</span>
+            </div>
+
+            <div class="si-trust__badge">
+                <span class="si-trust__badge-icon"><i class="fas fa-star" style="color:#FFB800;"></i></span>
+                <span class="si-trust__badge-num">4.9★</span>
+                <span class="si-trust__badge-text">Google Rating — 200+ verified client reviews</span>
+            </div>
+
+            <div class="si-trust__badge">
+                <span class="si-trust__badge-icon"><i class="fas fa-handshake"></i></span>
+                <span class="si-trust__badge-num">500+</span>
+                <span class="si-trust__badge-text">Happy Clients — Companies formed, amended, and closed</span>
+            </div>
+
+            <div class="si-trust__badge">
+                <span class="si-trust__badge-icon"><i class="fas fa-map-marker-alt"></i></span>
+                <span class="si-trust__badge-num">7</span>
+                <span class="si-trust__badge-text">Emirates Covered — All UAE jurisdictions</span>
+            </div>
+
+            <div class="si-trust__badge">
+                <span class="si-trust__badge-icon"><i class="fas fa-city"></i></span>
+                <span class="si-trust__badge-num">40+</span>
+                <span class="si-trust__badge-text">Free Zones — Direct working relationships</span>
+            </div>
+
+            <div class="si-trust__badge">
+                <span class="si-trust__badge-icon"><i class="fas fa-landmark"></i></span>
+                <span class="si-trust__badge-num">MOE</span>
+                <span class="si-trust__badge-text">Registered — Ministry of Economy UAE</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 7 — REVIEWS
+     ============================================================ -->
+<section class="si-reviews">
+    <div class="container">
+        <div class="si-reviews__header">
+            <span class="tag">What clients say</span>
+            <h2>What do Modest Consulting Services clients say about our services?</h2>
+        </div>
+        <div class="si-reviews__rating-bar">
+            <span class="si-reviews__stars">★★★★★</span>
+            <span class="si-reviews__score">4.9</span>
+            <span class="si-reviews__count">Google &nbsp;|&nbsp; 200+ Reviews &nbsp;|&nbsp; 98% Recommend</span>
+            <a href="https://g.page/r/modestuae/review" class="si-reviews__link" target="_blank" rel="noopener">Read all reviews <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="si-reviews__grid">
+
+            <div class="si-review-card">
+                <div class="si-review-card__stars">★★★★★</div>
+                <blockquote>"We used Modest Consulting Services for company formation, visa processing, and bookkeeping all at once. Having one team handle everything saved us weeks of coordination."</blockquote>
+                <div class="si-review-card__author">
+                    <strong>Sara Al Rashidi</strong>
+                    <span>Dubai Mainland LLC &nbsp;·&nbsp; Google</span>
+                </div>
+            </div>
+
+            <div class="si-review-card">
+                <div class="si-review-card__stars">★★★★★</div>
+                <blockquote>"Professional, fast, and completely transparent on pricing. Our IFZA company was set up in 4 days. VAT registration sorted the same week."</blockquote>
+                <div class="si-review-card__author">
+                    <strong>Ravi Menon</strong>
+                    <span>IFZA Free Zone &nbsp;·&nbsp; Google</span>
+                </div>
+            </div>
+
+            <div class="si-review-card">
+                <div class="si-review-card__stars">★★★★★</div>
+                <blockquote>"We had a complicated customs audit situation. Modest Consulting Services managed the entire FCA response and resolved it without any penalty. Highly recommend their customs team."</blockquote>
+                <div class="si-review-card__author">
+                    <strong>Hassan Al Muhairi</strong>
+                    <span>Dubai Importer &nbsp;·&nbsp; Google</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 8 — FAQ
+     ============================================================ -->
+<section class="si-faq">
+    <div class="container">
+        <div class="si-faq__header">
+            <span class="tag">Common Questions</span>
+            <h2>Common questions about Modest Consulting Services FZE</h2>
+        </div>
+        <div class="faq-accordion">
+
+            <div class="faq-item">
+                <button class="faq-question">How much do Modest Consulting Services services cost? <span class="arrow">▼</span></button>
+                <div class="faq-answer"><p>Every service has a fixed quote provided before any work begins. Costs depend on your specific requirement — jurisdiction, company size, employee count, and transaction volume. Contact us and we will send you a clear quote within a few hours.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Can Modest Consulting Services handle services for free zone and mainland companies? <span class="arrow">▼</span></button>
+                <div class="faq-answer"><p>Yes. We work with both mainland and free zone companies across all UAE jurisdictions — JAFZA, Dubai South, DMCC, DAFZA, IFZA, SHAMS, Ajman Free Zone, RAKEZ, and mainland in Dubai, Abu Dhabi, and Sharjah.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Do I need to visit any government office myself? <span class="arrow">▼</span></button>
+                <div class="faq-answer"><p>For most services — no. Our PRO team visits all authorities on your behalf. You only need to attend biometrics and medical appointments personally for visa applications.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Can I use more than one Modest Consulting Services service at the same time? <span class="arrow">▼</span></button>
+                <div class="faq-answer"><p>Yes — and most clients do. We recommend combining services where possible because one team managing everything is faster, cheaper, and produces fewer errors than coordinating multiple providers.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">What happens after I contact Modest Consulting Services? <span class="arrow">▼</span></button>
+                <div class="faq-answer"><p>A dedicated consultant responds within 1 business hour. They assess your requirement, give you clear advice, and send you a fixed quote. You decide whether to proceed — no pressure, no commitment required.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Does Modest Consulting Services work with startups or only established companies? <span class="arrow">▼</span></button>
+                <div class="faq-answer"><p>We work with businesses at every stage — pre-formation startups, newly registered companies, and established businesses that need ongoing compliance support.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Is there a minimum contract period for ongoing services like bookkeeping or payroll? <span class="arrow">▼</span></button>
+                <div class="faq-answer"><p>We offer flexible arrangements. Most ongoing services run on a month-to-month basis with a short notice period. Ask your consultant about the terms for your specific service.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Can I switch to Modest Consulting Services from my current accountant or PRO service provider? <span class="arrow">▼</span></button>
+                <div class="faq-answer"><p>Yes. We handle all transitions including data migration, backlog cleanup, and communication with your previous provider. Most transitions are completed within 5–7 working days.</p></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 9 — CONTACT FORM
+     ============================================================ -->
+<section class="si-contact" id="contact">
+    <div class="container">
+        <div class="si-contact__grid">
+
+            <!-- LEFT: FORM -->
+            <div>
+                <span class="tag">Get in touch</span>
+                <h2>Ready to get started? Contact Modest Consulting Services FZE today.</h2>
+                <p style="color:var(--text-body);font-size:15px;line-height:1.7;margin:12px 0 28px;">Tell us what you need and a consultant will respond within 1 business hour.</p>
+
+                <div class="si-contact__form-card">
+                    <form id="si-contact-form" novalidate>
+                        <div class="si-form__row">
+                            <div class="si-form__group">
+                                <label for="cf-name">Full Name <span style="color:var(--brand-red);">*</span></label>
+                                <input type="text" id="cf-name" name="name" placeholder="Your full name" required>
+                            </div>
+                            <div class="si-form__group">
+                                <label for="cf-phone">Phone Number <span style="color:var(--brand-red);">*</span></label>
+                                <input type="tel" id="cf-phone" name="phone" placeholder="+971 xx xxx xxxx" required>
+                            </div>
+                        </div>
+                        <div class="si-form__group">
+                            <label for="cf-email">Email Address <span style="color:var(--brand-red);">*</span></label>
+                            <input type="email" id="cf-email" name="email" placeholder="you@company.com" required>
+                        </div>
+                        <div class="si-form__group">
+                            <label>Service Needed</label>
+                            <div class="si-form__pills" id="service-pills">
+                                <span class="si-form__pill" data-value="Company Formation">Company Formation</span>
+                                <span class="si-form__pill" data-value="Business Licensing">Business Licensing</span>
+                                <span class="si-form__pill" data-value="Registration Amendments">Registration Amendments</span>
+                                <span class="si-form__pill" data-value="Branch Formation">Branch Formation</span>
+                                <span class="si-form__pill" data-value="Share Transfers">Share Transfers</span>
+                                <span class="si-form__pill" data-value="Company Liquidation">Company Liquidation</span>
+                                <span class="si-form__pill" data-value="PRO Services">PRO Services</span>
+                                <span class="si-form__pill" data-value="Accounting">Accounting</span>
+                                <span class="si-form__pill" data-value="Audit">Audit</span>
+                                <span class="si-form__pill" data-value="VAT">VAT</span>
+                                <span class="si-form__pill" data-value="Payroll">Payroll</span>
+                                <span class="si-form__pill" data-value="Customs">Customs</span>
+                                <span class="si-form__pill" data-value="Not sure">Not sure</span>
+                            </div>
+                            <input type="hidden" id="cf-service" name="service">
+                        </div>
+                        <div class="si-form__group">
+                            <label for="cf-message">Message (optional)</label>
+                            <textarea id="cf-message" name="message" placeholder="Tell us a little about your business and what you need…"></textarea>
+                        </div>
+                        <div class="si-form__group">
+                            <label class="si-form__consent">
+                                <input type="checkbox" id="cf-consent" required>
+                                I agree to be contacted by Modest Consulting Services regarding my enquiry. We will never share your details with third parties.
+                            </label>
+                        </div>
+                        <button type="submit" class="si-form__submit">Send my enquiry <i class="fas fa-paper-plane" style="margin-left:8px;"></i></button>
+                        <p class="si-form__helper"><i class="fas fa-lock" style="margin-right:4px;color:var(--brand-navy);"></i>We reply within 1 business hour during office hours.</p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- RIGHT: CONTACT INFO -->
+            <div class="si-contact__info">
+                <h3>Quick contact options</h3>
+                <div class="si-contact__quick-links">
+                    <a href="tel:+971564045802" class="si-contact__quick-link">
+                        <div class="si-contact__quick-link-icon phone"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <strong>Call us</strong>
+                            <span>+971 56 404 5802</span>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/971564045802" class="si-contact__quick-link" target="_blank" rel="noopener">
+                        <div class="si-contact__quick-link-icon wa"><i class="fab fa-whatsapp"></i></div>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <span>Chat instantly</span>
+                        </div>
+                    </a>
+                    <a href="mailto:info@modest-uae.ae" class="si-contact__quick-link">
+                        <div class="si-contact__quick-link-icon email"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <strong>Email</strong>
+                            <span>info@modest-uae.ae</span>
+                        </div>
+                    </a>
+                    <a href="contact.html" class="si-contact__quick-link">
+                        <div class="si-contact__quick-link-icon book"><i class="fas fa-calendar-check"></i></div>
+                        <div>
+                            <strong>Book a call</strong>
+                            <span>Schedule consultation</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="si-hours">
+                    <h4><i class="fas fa-clock" style="margin-right:6px;color:var(--brand-red);"></i>Office Hours</h4>
+                    <div class="si-hours__row">
+                        <span class="si-hours__day">Monday – Friday</span>
+                        <span class="si-hours__time">9:00 AM – 6:00 PM</span>
+                    </div>
+                    <div class="si-hours__row">
+                        <span class="si-hours__day">Saturday</span>
+                        <span class="si-hours__time">10:00 AM – 2:00 PM</span>
+                    </div>
+                    <div class="si-hours__row">
+                        <span class="si-hours__day">Sunday</span>
+                        <span class="si-hours__time closed">Closed</span>
+                    </div>
+                    <div class="si-hours__row" style="margin-top:8px;">
+                        <span class="si-hours__day"><i class="fas fa-map-marker-alt" style="margin-right:5px;color:var(--brand-red);"></i>Location</span>
+                        <span class="si-hours__time">Dubai, UAE</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECTION 10 — BOTTOM CTA
+     ============================================================ -->
+<section class="si-bottom-cta">
+    <div class="container" style="position:relative;z-index:2;">
+        <h2>Not sure which service you need? Talk to us — we will tell you exactly what applies to your situation.</h2>
+        <p>Free consultation. No commitment. No pressure.</p>
+        <div class="btn-group">
+            <a href="contact.html" class="btn btn-primary"><i class="fas fa-calendar-check" style="margin-right:7px;"></i>Book Free Consultation</a>
+            <a href="tel:+971564045802" class="btn-call"><i class="fas fa-phone" style="margin-right:7px;"></i>+971 56 404 5802</a>
+        </div>
+    </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="js/components.js"></script>
+<script src="js/script.js"></script>
+<script>
+// ---- Service pill selection ----
+document.querySelectorAll('.si-form__pill').forEach(pill => {
+    pill.addEventListener('click', function () {
+        this.classList.toggle('active');
+        const selected = [...document.querySelectorAll('.si-form__pill.active')]
+            .map(p => p.dataset.value).join(', ');
+        document.getElementById('cf-service').value = selected;
+    });
+});
+
+// ---- FAQ accordion ----
+document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', function () {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        if (!isOpen) item.classList.add('active');
+    });
+});
+
+// ---- Form submission (basic validation) ----
+document.getElementById('si-contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const name = document.getElementById('cf-name').value.trim();
+    const phone = document.getElementById('cf-phone').value.trim();
+    const email = document.getElementById('cf-email').value.trim();
+    const consent = document.getElementById('cf-consent').checked;
+    if (!name || !phone || !email || !consent) {
+        alert('Please fill in all required fields and accept the consent checkbox.');
+        return;
+    }
+    const btn = this.querySelector('.si-form__submit');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    // Replace with real form submission endpoint as needed
+    setTimeout(() => {
+        btn.textContent = 'Enquiry sent ✓';
+        btn.style.background = 'linear-gradient(135deg,#22c55e,#16a34a)';
+    }, 1200);
+});
+</script>
+</body>
+</html>
