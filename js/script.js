@@ -1,3 +1,63 @@
+
+emailjs.init({
+    publicKey: "xTj_OksGf_83PfvIS",
+});
+
+const contactForm = document.getElementById('contact-form');
+const formSuccess = document.getElementById('form-success');
+
+if (contactForm) {
+
+    contactForm.addEventListener('submit', function (e) {
+
+        e.preventDefault();
+
+        emailjs.sendForm(
+            "service_f9km9dd",
+            "template_cjwm9ph",
+            contactForm
+        )
+        .then(function () {
+
+            contactForm.style.opacity = '0';
+
+            setTimeout(() => {
+
+                contactForm.style.display = 'none';
+
+                if (formSuccess) {
+
+                    formSuccess.style.display = 'block';
+
+                    formSuccess.style.opacity = '0';
+
+                    setTimeout(() => {
+
+                        formSuccess.style.transition = 'opacity 0.5s ease';
+
+                        formSuccess.style.opacity = '1';
+
+                    }, 50);
+
+                }
+
+                contactForm.reset();
+
+            }, 300);
+
+        })
+        .catch(function (error) {
+
+            console.error(error);
+
+            alert("Failed to send message.");
+
+        });
+
+    });
+
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // ── Service Page Hero — stat counter animation ──────────────────────────
