@@ -1,4 +1,9 @@
 
+
+document.addEventListener('DOMContentLoaded', () => {
+
+
+    
 emailjs.init({
     publicKey: "xTj_OksGf_83PfvIS",
 });
@@ -58,8 +63,6 @@ if (contactForm) {
 
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-
     // ── Service Page Hero — stat counter animation ──────────────────────────
     const heroCounters = document.querySelectorAll('.cf-hero__stat-num[data-target]');
     if (heroCounters.length) {
@@ -94,26 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ── Contact Form (simulated) ────────────────────────────────────────────
-    const contactForm = document.getElementById('contact-form');
-    const formSuccess = document.getElementById('form-success');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            contactForm.style.opacity = '0';
-            setTimeout(() => {
-                contactForm.style.display = 'none';
-                if (formSuccess) {
-                    formSuccess.style.display = 'block';
-                    formSuccess.style.opacity = '0';
-                    setTimeout(() => {
-                        formSuccess.style.transition = 'opacity 0.5s ease';
-                        formSuccess.style.opacity = '1';
-                    }, 50);
-                }
-            }, 300);
-        });
-    }
+
 
     // ── Scroll Reveal Animations ────────────────────────────────────────────
     const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
