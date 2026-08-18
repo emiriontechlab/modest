@@ -129,22 +129,51 @@ if (contactForm) {
         document.querySelectorAll('#star-row .star').forEach(s => s.classList.add('lit'));
     }
 
-    const statsBar = document.querySelector('.about-stats-bar');
     let statsFired = false;
-    if (statsBar) {
-        const statsObserver = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !statsFired) {
-                    statsFired = true;
-                    animateCounter(document.getElementById('stat-clients'),  500, 2000, false);
-                    animateCounter(document.getElementById('stat-emirates'),   7, 1200, false);
-                    animateCounter(document.getElementById('stat-zones'),     40, 1600, false);
-                    animateCounter(document.getElementById('stat-rating'),   4.9, 1800, true);
-                    setTimeout(animateStars, 600);
-                    statsObserver.disconnect();
-                }
-            });
-        }, { threshold: 0.3 });
-        statsObserver.observe(statsBar);
+
+    function fireStatsAnimation() {
+        if (statsFired) return;
+        statsFired = true;
+        // Reset to 0 before animating so the count-up plays
+        const clients = document.getElementById('stat-clients');
+        const emirates = document.getElementById('stat-emirates');
+        const zones = document.getElementById('stat-zones');
+        const rating = document.getElementById('stat-rating');
+        if (clients)  clients.textContent  = '0';
+        if (emirates) emirates.textContent = '0';
+        if (zones)    zones.textContent    = '0';
+        if (rating)   rating.textContent   = '0.0';
+        animateCounter(clients,  500, 2000, false);
+        animateCounter(emirates,   7, 1200, false);
+        animateCounter(zones,     40, 1600, false);
+        animateCounter(rating,   4.9, 1800, true);
+        setTimeout(animateStars, 600);
     }
+
+    function initStatsObserver() {
+        if (statsFired) return;
+        const statsBar = document.querySelector('.about-stats-bar');
+        if (!statsBar) return;
+
+        // Check if already in viewport
+        const rect = statsBar.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            fireStatsAnimation();
+            return;
+        }
+
+        // Otherwise watch for scroll
+        const onScroll = () => {
+            const r = statsBar.getBoundingClientRect();
+            if (r.top < window.innerHeight && r.bottom > 0) {
+                window.removeEventListener('scroll', onScroll);
+                fireStatsAnimation();
+            }
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+    }
+
+    // Try after components load, then again on full page load as fallback
+    window.addEventListener('componentsLoaded', () => setTimeout(initStatsObserver, 100));
+    window.addEventListener('load', () => setTimeout(initStatsObserver, 200));
 });

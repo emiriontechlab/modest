@@ -107,4 +107,5 @@ function initHeaderScripts() {
         loadComponent('footer-placeholder', 'components/footer.html'),
     ]);
     initHeaderScripts();
+    window.dispatchEvent(new Event('componentsLoaded'));
 })();
