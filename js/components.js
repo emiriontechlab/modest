@@ -17,10 +17,18 @@ async function loadComponent(id, url) {
 }
 
 function highlightActiveNav() {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    // Support both clean URLs (/about) and .html filenames (/about.html)
+    const pathParts = window.location.pathname.split('/').filter(Boolean);
+    const currentSlug = pathParts[pathParts.length - 1] || '';
+    // Strip .html extension if present
+    const currentPage = currentSlug.replace(/\.html$/, '') || 'index';
+
     document.querySelectorAll('#site-header .nav-links > a, #site-header .nav-links .dropdown-toggle').forEach(link => {
         const href = link.getAttribute('href');
-        if (href && href !== '#' && currentPage === href.split('/').pop()) {
+        if (!href || href === '#') return;
+        // Normalise the link href to a slug for comparison
+        const hrefSlug = href.replace(/^\//, '').replace(/\.html$/, '').split('/').pop() || 'index';
+        if (currentPage === hrefSlug) {
             link.style.color = 'var(--brand-red)';
         }
     });
