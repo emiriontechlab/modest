@@ -20,6 +20,7 @@
     { "source": "/service-template/",               "destination": "/service-template",               "permanent": true },
     { "source": "/blog/",                           "destination": "/blog",                           "permanent": true },
     { "source": "/blog-post/",                      "destination": "/blog-post",                      "permanent": true },
+    { "source": "/blog/transferring-company-shares-in-uae-legal-process/", "destination": "/blog/transferring-company-shares-in-uae-legal-process", "permanent": true },
     { "source": "/faq/",                            "destination": "/faq",                            "permanent": true },
     { "source": "/pro-services.html",               "destination": "/pro-government-services",        "permanent": true },
     { "source": "/vat-consultancy.html",            "destination": "/vat-registration-filing",        "permanent": true }
@@ -45,6 +46,8 @@
     { "source": "/service-template",               "destination": "/service-template.html" },
     { "source": "/blog",                           "destination": "/blog.html" },
     { "source": "/blog-post",                      "destination": "/blog-post.html" },
+    { "source": "/blog/transferring-company-shares-in-uae-legal-process", "destination": "/blog/transferring-company-shares-in-uae-legal-process.html" },
     { "source": "/faq",                            "destination": "/faq.html" }
+
   ]
 }
