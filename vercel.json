@@ -16,7 +16,7 @@
     { "source": "/pcfc-trakhees-services/",         "destination": "/pcfc-trakhees-services",         "permanent": true },
     { "source": "/pro-government-services/",        "destination": "/pro-government-services",        "permanent": true },
     { "source": "/other-services/",                 "destination": "/other-services",                 "permanent": true },
-    { "source": "/service",                         "destination": "/service-individual",             "permanent": true },
+    { "source": "/service/",                         "destination": "/service-individual",             "permanent": true },
     { "source": "/service-template/",               "destination": "/service-template",               "permanent": true },
     { "source": "/blog/",                           "destination": "/blog",                           "permanent": true },
     { "source": "/blog-post/",                      "destination": "/blog-post",                      "permanent": true },
