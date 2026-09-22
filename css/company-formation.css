@@ -126,6 +126,40 @@
     line-height: 1.7;
     margin-bottom: 14px;
 }
+
+/* New: subheading line below H1 */
+.cf-hero__subheading {
+    color: rgba(255,255,255,0.85);
+    font-size: clamp(15px, 1.8vw, 19px);
+    line-height: 1.5;
+    font-weight: 500;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+/* New: benefit bullet list in hero */
+.cf-hero__benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+}
+.cf-hero__benefits li {
+    color: rgba(255,255,255,0.85);
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.cf-hero__benefits li::before {
+    content: "✓";
+    color: #FF4D55;
+    font-weight: 700;
+    flex-shrink: 0;
+}
 .cf-hero__body {
     color: rgba(255,255,255,0.65);
     font-size: 15px;
