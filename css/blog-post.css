@@ -545,3 +545,184 @@
     }
     .internal-links-strip { padding: 20px; }
 }
+
+/* ==========================================================================
+   MOBILE — Blog Post Specific Fixes
+   ========================================================================== */
+
+/* Ensure the blog article never overflows the viewport */
+.article-content,
+.rich-text {
+    max-width: 100%;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Tables: allow horizontal scroll on small screens */
+.timeline-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+}
+
+/* Prevent table cells from squishing text into single characters */
+.timeline-table {
+    min-width: 480px;
+}
+
+/* Mobile TOC box */
+.toc-box {
+    background: var(--bg-alt);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 28px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.toc-box h4 {
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--brand-navy);
+}
+.toc-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.toc-box ul li a {
+    font-size: 14px;
+    color: var(--text-body);
+    text-decoration: none;
+    display: block;
+    padding: 2px 0;
+    border-left: 2px solid transparent;
+    padding-left: 10px;
+    transition: color 0.2s, border-color 0.2s;
+}
+.toc-box ul li a:hover {
+    color: var(--brand-red);
+    border-left-color: var(--brand-red);
+}
+
+@media (max-width: 768px) {
+    /* Hero image — shorter on mobile */
+    .article-hero-img {
+        height: 200px;
+    }
+
+    /* Inline images — don't let them overflow */
+    .article-inline-img {
+        max-height: 220px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    /* Infographic / flowchart images — override inline style on mobile */
+    .article-inline-figure img[style] {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* Rich text font sizes */
+    .rich-text p,
+    .rich-text ul,
+    .rich-text ol,
+    .rich-text li {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    /* Table cells smaller on mobile */
+    .timeline-table th,
+    .timeline-table td {
+        padding: 10px 12px;
+        font-size: 13px;
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    /* Bottom CTA stacked */
+    .article-bottom-cta {
+        padding: 24px 18px;
+    }
+    .article-bottom-cta h2 {
+        font-size: 18px;
+    }
+    .abc-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    .abc-actions .btn,
+    .abc-actions .btn-wa {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* Internal links strip */
+    .internal-links-strip {
+        padding: 16px;
+    }
+    .internal-link-card {
+        gap: 10px;
+        padding: 10px 10px;
+    }
+    .ilc-text strong {
+        font-size: 13px;
+    }
+
+    /* Author bio stacked */
+    .author-bio-box {
+        flex-direction: column;
+        gap: 12px;
+        padding: 20px;
+    }
+
+    /* FAQ */
+    .post-faq .faq-question {
+        font-size: 14px;
+        padding: 14px 16px;
+    }
+
+    /* Section spacing reduction */
+    .section-spacing {
+        padding: 48px 0;
+    }
+
+    /* Related articles grid */
+    .related-articles .post-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Even smaller table text */
+    .timeline-table {
+        min-width: 360px;
+    }
+    .timeline-table th,
+    .timeline-table td {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    /* Article heading sizes */
+    .article-content h1 {
+        font-size: 22px;
+    }
+    .rich-text h2 {
+        font-size: 18px;
+    }
+    .rich-text h3 {
+        font-size: 15px;
+    }
+}
