@@ -30,7 +30,7 @@
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
     <meta name="theme-color" content="#1E3A8A">
-    <link rel="canonical" href="https://modest-uae.ae/about.html">
+    <link rel="canonical" href="https://modest-uae.ae/about">
 
     <!-- ========================================= -->
     <!-- FAVICON -->
@@ -43,7 +43,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="About Modest Consulting Services | Licensed Business Setup Consultancy in Dubai">
     <meta property="og:description" content="Modest Consulting Services is a Dubai-licensed business setup consultancy. We help entrepreneurs and investors form, amend, and close companies across all seven UAE emirates. Free consultation available.">
-    <meta property="og:url" content="https://modest-uae.ae/about.html">
+    <meta property="og:url" content="https://modest-uae.ae/about">
     <meta property="og:site_name" content="Modest Consulting Services FZE">
     <meta property="og:locale" content="en_AE">
     <meta property="og:image" content="https://modest-uae.ae/images/about-section-home-page.jpg">
@@ -64,7 +64,7 @@
     <!-- ========================================= -->
     <!-- CONTACT -->
     <!-- ========================================= -->
-    <meta name="telephone" content="+9715640458022">
+    <meta name="telephone" content="+971564045802">
     <meta name="email" content="info@modest-uae.ae">
 
     <link rel="stylesheet" href="css/styles.css">
@@ -80,13 +80,13 @@
           "@id": "https://modest-uae.ae/#organization",
           "name": "Modest Consulting Services",
           "url": "https://modest-uae.ae",
-          "logo": "https://modest-uae.ae/images/Modest-logo.webp"
+          "logo": "https://modest-uae.ae/images/modest-logo.webp"
         },
         {
           "@type": "LocalBusiness",
           "name": "Modest Consulting Services",
           "image": "https://modest-uae.ae/images/hero-section.jpg",
-          "telephone": "+9715640458022",
+          "telephone": "+971564045802",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Dubai",
@@ -108,7 +108,7 @@
       "url": "https://modest-uae.ae",
       "logo": "https://modest-uae.ae/images/modest-logo.webp",
       "image": "https://modest-uae.ae/images/modest-logo.webp",
-      "telephone": "+9715640458022",
+      "telephone": "+971564045802",
       "email": "info@modest-uae.ae",
       "sameAs": [
         "https://www.facebook.com/profile.php?id=61587188174274",
@@ -127,6 +127,49 @@
       "@type": "WebSite",
       "name": "Modest Consulting Services FZE",
       "url": "https://modest-uae.ae"
+    }
+    </script>
+    <!-- ========================================= -->
+    <!-- SCHEMA MARKUP - PEOPLE -->
+    <!-- ========================================= -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://modest-uae.ae/#founder",
+          "name": "Thekke Mannur Samuel Jose",
+          "jobTitle": "Founder & CEO",
+          "image": "https://modest-uae.ae/images/thekke-mannur-samuel-jose-founder-modest.webp",
+          "url": "https://modest-uae.ae/about",
+          "worksFor": { "@id": "https://modest-uae.ae/#business" }
+        },
+        {
+          "@type": "Person",
+          "name": "Mohamed Sahal",
+          "jobTitle": "Client Relations Executive",
+          "image": "https://modest-uae.ae/images/team-member-1.webp",
+          "sameAs": ["https://www.linkedin.com/in/mohamed-sahal-33010a206"],
+          "worksFor": { "@id": "https://modest-uae.ae/#business" }
+        },
+        {
+          "@type": "Person",
+          "name": "Cybel Martin",
+          "jobTitle": "Business Support Executive",
+          "image": "https://modest-uae.ae/images/team-member-2.webp",
+          "sameAs": ["https://www.linkedin.com/in/cybel-martin-59217b5a/"],
+          "worksFor": { "@id": "https://modest-uae.ae/#business" }
+        },
+        {
+          "@type": "Person",
+          "name": "Silpa Abraham",
+          "jobTitle": "Accountant",
+          "image": "https://modest-uae.ae/images/team-member-3.webp",
+          "sameAs": ["https://www.linkedin.com/in/silpa-abraham29"],
+          "worksFor": { "@id": "https://modest-uae.ae/#business" }
+        }
+      ]
     }
     </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></head>
@@ -149,7 +192,7 @@
                 <p>Our team of certified PRO officers, legal advisors, and business consultants has served 500+ clients across mainland UAE and all major free zones — with one dedicated consultant assigned to every single file, from the first consultation to final delivery.</p> -->
                 <div class="btn-group">
                     <a href="/contact" class="btn btn-primary">Talk to our team</a>
-                    <a href="service-individual.html" class="btn btn-primary">go to our services</a>
+                    <a href="/service-individual" class="btn btn-primary">go to our services</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -180,7 +223,7 @@
                     <span class="stat-label">Free Zones Supported</span>
                 </div>
                 <div class="stat-card hover-3d">
-                    <span class="stat-number">4.9★</span>
+                    <span $15.0★</span>
                     <span class="stat-label">Google Rating</span>
                 </div>
             </div>
@@ -205,7 +248,7 @@
                 <p>We cover UAE mainland in Dubai, Abu Dhabi, and Sharjah — and all major free zones including JAFZA, Dubai South, DMCC, DAFZA, IFZA, SHAMS, Ajman Free Zone, and RAKEZ.</p>
             </div>
 
-            <div class="founder-image-container">
+            <div class="founder-image-container" id="founder">
 
                 <div class="founder-bg-shape"></div>
 
@@ -514,7 +557,7 @@
     </section>
 
     <!-- SECTION 9 — MEET THE TEAM -->
-    <section class="team section-spacing reveal-up">
+    <section class="team section-spacing reveal-up" id="team">
         <div class="container">
             <div class="section-header center">
                 <span class="tag">Our Team</span>
@@ -785,7 +828,7 @@
             <p style="color: #FFF; margin-bottom: 20px;">Talk to a Modest Consulting Services consultant today. Free consultation, no commitment, no hidden charges.</p>
             <div class="btn-group justify-center">
                 <a href="/contact" class="btn btn-primary">Get Free Consultation</a>
-                <a href="tel:+9715640458022" class="btn btn-outline" style="border-color: #FFF; color: #FFF;">Call: +971 56 404 5802</a>
+                <a href="tel:+971564045802" class="btn btn-outline" style="border-color: #FFF; color: #FFF;">Call: +971 56 404 5802</a>
             </div>
         </div>
     </section>

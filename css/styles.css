@@ -478,7 +478,7 @@ p { margin-bottom: 1rem; }
 
 .faq-item.active .faq-answer {
     padding: 0 20px 20px;
-    max-height: 300px;
+    max-height: 600px;
 }
 
 .faq-item.active .arrow {
@@ -3502,4 +3502,117 @@ input:focus, textarea:focus {
         font-size: 14px;
         max-width: 100%;
     }
+}
+
+
+/* ==========================================================================
+   SHARED — TOP BAR, WHATSAPP BUTTON, MOBILE STICKY CTA
+   ========================================================================== */
+
+/* Reserve the injected header's height so the page doesn't jump when it loads */
+#header-placeholder { min-height: 71px; }
+
+.top-bar {
+    background: var(--brand-navy);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.top-bar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+    min-height: 38px;
+}
+
+.top-bar__item { color: inherit; white-space: nowrap; }
+.top-bar__item:first-child { margin-right: auto; }
+a.top-bar__item:hover { color: #FFF; }
+
+.top-bar__wa {
+    background: #12894A;
+    color: #FFF;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+a.phone-number:hover { color: var(--brand-red); }
+
+@media (min-width: 993px) {
+    #header-placeholder { min-height: 109px; }
+}
+
+@media (max-width: 992px) {
+    .top-bar { display: none; }
+}
+
+.btn-wa {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #12894A;
+    color: #FFF;
+    border: 2px solid #12894A;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(18, 137, 74, 0.3);
+}
+
+.btn-wa:hover {
+    background: #0E733D;
+    border-color: #0E733D;
+    color: #FFF;
+    transform: translateY(-2px);
+}
+
+.btn-wa svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+.sticky-cta { display: none; }
+
+@media (max-width: 768px) {
+    .sticky-cta {
+        display: flex;
+        gap: 8px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9998;
+        padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px));
+        background: #FFF;
+        box-shadow: 0 -4px 16px rgba(9, 14, 45, 0.12);
+        transition: transform 0.3s ease;
+    }
+
+    .sticky-cta--hidden { transform: translateY(110%); }
+
+    .sticky-cta__btn {
+        flex: 1 1 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 48px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #FFF;
+    }
+
+    .sticky-cta__btn--wa { background: #12894A; }
+    .sticky-cta__btn--call { background: var(--brand-navy); }
+
+    /* The sticky bar replaces the floating bubble on phones */
+    body.has-sticky-cta { padding-bottom: 64px; }
+    body.has-sticky-cta .floating-wa { display: none; }
+}
+
+/* Anchored sections clear the sticky header */
+:target { scroll-margin-top: 90px; }
+
+@media (max-width: 768px) {
+    .footer-bottom { flex-direction: column; gap: 6px; }
 }

@@ -54,7 +54,9 @@ function initHeaderScripts() {
     const navLinks = document.querySelector('.nav-links');
     if (mobileToggle && navLinks) {
         mobileToggle.addEventListener('click', () => {
-            if (navLinks.style.display === 'flex') {
+            const isOpen = navLinks.style.display === 'flex';
+            mobileToggle.setAttribute('aria-expanded', String(!isOpen));
+            if (isOpen) {
                 navLinks.style.display = 'none';
             } else {
                 navLinks.style.display = 'flex';
@@ -66,6 +68,8 @@ function initHeaderScripts() {
                 navLinks.style.backgroundColor = '#FFF';
                 navLinks.style.padding = '20px';
                 navLinks.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+                navLinks.style.maxHeight = 'calc(100vh - 140px)';
+                navLinks.style.overflowY = 'auto';
             }
         });
     }
@@ -109,11 +113,31 @@ function initHeaderScripts() {
     highlightActiveNav();
 }
 
+function initFooterScripts() {
+    document.querySelectorAll('.js-year').forEach(el => {
+        el.textContent = new Date().getFullYear();
+    });
+
+    // Mobile sticky WhatsApp/Call bar — hidden while the final CTA block is on screen
+    const stickyCta = document.getElementById('sticky-cta');
+    if (!stickyCta) return;
+    document.body.classList.add('has-sticky-cta');
+    const finalCta = document.querySelector('[data-hide-sticky-cta]');
+    if (finalCta && 'IntersectionObserver' in window) {
+        new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                stickyCta.classList.toggle('sticky-cta--hidden', entry.isIntersecting);
+            });
+        }, { threshold: 0.15 }).observe(finalCta);
+    }
+}
+
 (async () => {
     await Promise.all([
-        loadComponent('header-placeholder', 'components/header.html'),
-        loadComponent('footer-placeholder', 'components/footer.html'),
+        loadComponent('header-placeholder', '/components/header.html'),
+        loadComponent('footer-placeholder', '/components/footer.html'),
     ]);
     initHeaderScripts();
+    initFooterScripts();
     window.dispatchEvent(new Event('componentsLoaded'));
 })();

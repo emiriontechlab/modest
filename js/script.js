@@ -2,66 +2,59 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // ── Lead forms (contact page + homepage call-back) — sent through EmailJS ──
+    const leadForms = document.querySelectorAll('#contact-form, #callback-form');
 
-    
-emailjs.init({
-    publicKey: "xTj_OksGf_83PfvIS",
-});
-
-const contactForm = document.getElementById('contact-form');
-const formSuccess = document.getElementById('form-success');
-
-if (contactForm) {
-
-    contactForm.addEventListener('submit', function (e) {
-
-        e.preventDefault();
-
-        emailjs.sendForm(
-            "service_f9km9dd",
-            "template_cjwm9ph",
-            contactForm
-        )
-        .then(function () {
-
-            contactForm.style.opacity = '0';
-
-            setTimeout(() => {
-
-                contactForm.style.display = 'none';
-
-                if (formSuccess) {
-
-                    formSuccess.style.display = 'block';
-
-                    formSuccess.style.opacity = '0';
-
-                    setTimeout(() => {
-
-                        formSuccess.style.transition = 'opacity 0.5s ease';
-
-                        formSuccess.style.opacity = '1';
-
-                    }, 50);
-
-                }
-
-                contactForm.reset();
-
-            }, 300);
-
-        })
-        .catch(function (error) {
-
-            console.error(error);
-
-            alert("Failed to send message.");
-
+    if (leadForms.length && window.emailjs) {
+        emailjs.init({
+            publicKey: "xTj_OksGf_83PfvIS",
         });
+    }
 
+    leadForms.forEach(form => {
+        const formSuccess = form.parentElement.querySelector('.form-success-state') || document.getElementById('form-success');
+        const submitBtn = form.querySelector('[type="submit"]');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            if (!window.emailjs) {
+                alert("Failed to send message. Please call or WhatsApp us instead.");
+                return;
+            }
+
+            if (submitBtn) submitBtn.disabled = true;
+
+            emailjs.sendForm("service_f9km9dd", "template_cjwm9ph", form)
+                .then(function () {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        event: 'generate_lead',
+                        service: (new FormData(form).get('service') || ''),
+                        placement: form.getAttribute('data-placement') || form.id
+                    });
+
+                    form.style.opacity = '0';
+                    setTimeout(() => {
+                        form.style.display = 'none';
+                        if (formSuccess) {
+                            formSuccess.style.display = 'block';
+                            formSuccess.style.opacity = '0';
+                            setTimeout(() => {
+                                formSuccess.style.transition = 'opacity 0.5s ease';
+                                formSuccess.style.opacity = '1';
+                            }, 50);
+                        }
+                        form.reset();
+                    }, 300);
+                })
+                .catch(function (error) {
+                    console.error(error);
+                    if (submitBtn) submitBtn.disabled = false;
+                    alert("Failed to send message.");
+                });
+        });
     });
-
-}
 
     // ── Service Page Hero — stat counter animation ──────────────────────────
     const heroCounters = document.querySelectorAll('.cf-hero__stat-num[data-target]');
