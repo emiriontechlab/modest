@@ -127,19 +127,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function fireStatsAnimation() {
         if (statsFired) return;
         statsFired = true;
-        // Reset to 0 before animating so the count-up plays
-        const clients = document.getElementById('stat-clients');
-        const emirates = document.getElementById('stat-emirates');
-        const zones = document.getElementById('stat-zones');
-        const rating = document.getElementById('stat-rating');
-        if (clients)  clients.textContent  = '0';
-        if (emirates) emirates.textContent = '0';
-        if (zones)    zones.textContent    = '0';
-        if (rating)   rating.textContent   = '0.0';
-        animateCounter(clients,  500, 2000, false);
-        animateCounter(emirates,   7, 1200, false);
-        animateCounter(zones,     40, 1600, false);
-        animateCounter(rating,   4.9, 1800, true);
+        // Each stat counts up from 0 to the number in its data-target attribute
+        document.querySelectorAll('.about-stats-bar .about-stat-item[data-target]').forEach((item, i) => {
+            const num = item.querySelector('.stat-num');
+            const target = parseFloat(item.getAttribute('data-target'));
+            if (!num || isNaN(target)) return;
+            num.textContent = '0';
+            animateCounter(num, target, 1200 + i * 300, false);
+        });
         setTimeout(animateStars, 600);
     }
 

@@ -2,9 +2,16 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/service",          "destination": "/service-individual",      "permanent": true },
-    { "source": "/services",         "destination": "/service-template",        "permanent": true },
-    { "source": "/pro-services",     "destination": "/pro-government-services", "permanent": true },
-    { "source": "/vat-consultancy",  "destination": "/vat-registration-filing", "permanent": true }
+    { "source": "/service-individual.html", "destination": "/",                         "statusCode": 301 },
+    { "source": "/service-individual",      "destination": "/",                         "statusCode": 301 },
+    { "source": "/service",                 "destination": "/",                         "statusCode": 301 },
+    { "source": "/blog-post.html",          "destination": "/company-formation",        "statusCode": 301 },
+    { "source": "/blog-post",               "destination": "/company-formation",        "statusCode": 301 },
+    { "source": "/blog.html",               "destination": "/blog",                     "statusCode": 301 },
+    { "source": "/services",                "destination": "/service-template",         "statusCode": 301 },
+    { "source": "/pro-services.html",       "destination": "/pro-government-services",  "statusCode": 301 },
+    { "source": "/pro-services",            "destination": "/pro-government-services",  "statusCode": 301 },
+    { "source": "/vat-consultancy.html",    "destination": "/vat-registration-filing",  "statusCode": 301 },
+    { "source": "/vat-consultancy",         "destination": "/vat-registration-filing",  "statusCode": 301 }
   ]
 }
