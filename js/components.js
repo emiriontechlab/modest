@@ -68,7 +68,7 @@ function initHeaderScripts() {
                 navLinks.style.backgroundColor = '#FFF';
                 navLinks.style.padding = '20px';
                 navLinks.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
-                navLinks.style.maxHeight = 'calc(100vh - 70px)';
+                navLinks.style.maxHeight = 'calc(100vh - 140px)';
                 navLinks.style.overflowY = 'auto';
             }
         });
@@ -117,6 +117,19 @@ function initFooterScripts() {
     document.querySelectorAll('.js-year').forEach(el => {
         el.textContent = new Date().getFullYear();
     });
+
+    // Mobile sticky WhatsApp/Call bar — hidden while the final CTA block is on screen
+    const stickyCta = document.getElementById('sticky-cta');
+    if (!stickyCta) return;
+    document.body.classList.add('has-sticky-cta');
+    const finalCta = document.querySelector('[data-hide-sticky-cta]');
+    if (finalCta && 'IntersectionObserver' in window) {
+        new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                stickyCta.classList.toggle('sticky-cta--hidden', entry.isIntersecting);
+            });
+        }, { threshold: 0.15 }).observe(finalCta);
+    }
 }
 
 (async () => {
