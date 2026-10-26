@@ -3618,3 +3618,66 @@ a.phone-number:hover { color: var(--brand-red); }
 @media (max-width: 768px) {
     .footer-bottom { flex-direction: column; gap: 6px; }
 }
+
+/* ── Lead tracking: "Please mention you found us…" line under call buttons ── */
+.cf-cta-mention {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 12px 0 0;
+}
+.cf-hero .cf-cta-mention,
+.cf-bottom-cta .cf-cta-mention,
+.bottom-cta .cf-cta-mention,
+.faq-cta .cf-cta-mention,
+.srv-cta .cf-cta-mention { color: rgba(255,255,255,0.65); margin: 14px 0 0; }
+
+/* ── Contact block in every page's final CTA (dark background) ── */
+.cf-contact-block {
+    font-style: normal;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    max-width: 900px;
+    margin: 40px auto 0;
+    text-align: left;
+}
+.cf-contact-block__item {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+.cf-contact-block__label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+}
+.cf-contact-block__item a,
+.cf-contact-block__item span:not(.cf-contact-block__label) {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+.cf-contact-block__item a:hover { color: #FF4D55; }
+/* Narrower column next to an image (FAQ page CTA) */
+.faq-cta .cf-contact-block,
+.srv-cta .cf-contact-block { grid-template-columns: repeat(2, 1fr); margin: 32px 0 0; }
+
+@media (max-width: 768px) {
+    .cf-contact-block,
+    .faq-cta .cf-contact-block,
+    .srv-cta .cf-contact-block { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+    .cf-contact-block,
+    .faq-cta .cf-contact-block,
+    .srv-cta .cf-contact-block { grid-template-columns: 1fr; }
+}

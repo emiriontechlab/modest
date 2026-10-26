@@ -1,4 +1,104 @@
+// ── Lead tracking ───────────────────────────────────────────────────────────
+// Every WhatsApp message, email and form enquiry tells Modest it came from
+// www.modest-uae.ae, which page and which service. Each page sets this on <body>:
+//   data-page-name="Registration Amendments" data-service="trade license amendment"
+//   data-service-label="Trade License Amendment"
+// Links only need the plain fallback href (https://wa.me/971564045802 or
+// mailto:info@modest-uae.ae) and a data-placement name for GA4.
+const LEAD_SITE = 'www.modest-uae.ae';
 
+function leadGet(key) {
+    try { return sessionStorage.getItem(key) || ''; } catch (e) { return ''; }
+}
+
+function leadSet(key, value) {
+    try { sessionStorage.setItem(key, value); } catch (e) { /* storage blocked */ }
+}
+
+function leadPageInfo() {
+    const { pageName, service, serviceLabel } = document.body.dataset;
+    return {
+        pageName: pageName || document.title.split('|')[0].trim(),
+        service: service || 'your services',
+        label: serviceLabel || 'General Enquiry',
+    };
+}
+
+// Remember the last service page and the first UTM values of the visit,
+// so the contact form knows where the visitor came from.
+function rememberLeadSource() {
+    const { pageName, label } = leadPageInfo();
+    if (document.body.dataset.service) {
+        leadSet('src_page_name', pageName);
+        leadSet('src_page_url', location.href);
+        leadSet('src_service', label);
+    }
+    try {
+        const q = new URLSearchParams(location.search);
+        ['utm_source', 'utm_medium', 'utm_campaign'].forEach(k => {
+            if (q.get(k) && !leadGet(k)) leadSet(k, q.get(k));
+        });
+    } catch (e) { /* old browser */ }
+}
+
+// Safe to run more than once — called again after the shared header/footer load
+function applyLeadLinks() {
+    const { pageName, service, label } = leadPageInfo();
+    // Also escapes ' ( ) so the links stay readable in WhatsApp/mail apps
+    const enc = s => encodeURIComponent(s).replace(/[!'()*]/g, c => '%' + c.charCodeAt(0).toString(16).toUpperCase());
+
+    const waText = `Hi Modest Consulting Services, I found you on your website ${LEAD_SITE} (${pageName}). I'm interested in ${service}. Please share the details.`;
+    document.querySelectorAll('a[href*="wa.me/971564045802"]').forEach(a => {
+        a.href = 'https://wa.me/971564045802?text=' + enc(waText);
+        a.target = '_blank';
+        a.rel = 'noopener';
+    });
+
+    const subject = `Website Enquiry – ${label} – ${LEAD_SITE}`;
+    const body = `Hi Modest Consulting Services, I'm contacting you from your website ${LEAD_SITE} (${pageName}) about ${service}. My requirement is: `;
+    document.querySelectorAll('a[href^="mailto:info@modest-uae.ae"]').forEach(a => {
+        a.href = 'mailto:info@modest-uae.ae?subject=' + enc(subject) + '&body=' + enc(body);
+    });
+}
+
+// Hidden fields sent with every form (EmailJS passes them to the email templates)
+function fillLeadFields(form) {
+    function setField(name, value) {
+        let input = form.querySelector(`input[type="hidden"][name="${name}"]`);
+        if (!input) {
+            input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = name;
+            form.appendChild(input);
+        }
+        input.value = value || '';
+    }
+
+    // The visitor's own service choice (radio/select named "service") is kept as is;
+    // the service page they came from goes in source_service.
+    const picked = form.querySelector('[name="service"]:not([type="hidden"])') ? new FormData(form).get('service') : '';
+    const sourceService = leadGet('src_service');
+    if (!picked) setField('service', sourceService || 'General Enquiry');
+    setField('source_service', sourceService);
+    setField('page_url', leadGet('src_page_url') || location.href);
+    setField('page_title', leadGet('src_page_name') || document.title);
+    setField('utm_source', leadGet('utm_source'));
+    setField('utm_medium', leadGet('utm_medium'));
+    setField('utm_campaign', leadGet('utm_campaign'));
+    setField('submitted_at', new Date().toLocaleString('en-GB', { timeZone: 'Asia/Dubai' }));
+}
+
+// Capture phase: fills the fields before any form's own submit handler sends it
+document.addEventListener('submit', e => {
+    if (e.target instanceof HTMLFormElement) fillLeadFields(e.target);
+}, true);
+
+window.addEventListener('componentsLoaded', applyLeadLinks);
+
+document.addEventListener('DOMContentLoaded', () => {
+    rememberLeadSource();
+    applyLeadLinks();
+});
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -27,10 +127,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             emailjs.sendForm("service_f9km9dd", "template_cjwm9ph", form)
                 .then(function () {
+                    // GA4 form_submit (GTM Custom Event trigger)
+                    const data = new FormData(form);
                     window.dataLayer = window.dataLayer || [];
                     window.dataLayer.push({
-                        event: 'generate_lead',
-                        service: (new FormData(form).get('service') || ''),
+                        event: 'form_submit_success',
+                        service: data.get('source_service') || data.get('service') || '',
+                        page_title: data.get('page_title') || document.title,
                         placement: form.getAttribute('data-placement') || form.id
                     });
 
@@ -84,9 +187,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!btn) return;
         btn.addEventListener('click', () => {
             faqItems.forEach(other => {
-                if (other !== item) other.classList.remove('active');
+                if (other !== item) {
+                    other.classList.remove('active');
+                    other.querySelector('.faq-question')?.setAttribute('aria-expanded', 'false');
+                }
             });
-            item.classList.toggle('active');
+            const isOpen = item.classList.toggle('active');
+            btn.setAttribute('aria-expanded', String(isOpen));
         });
     });
 
