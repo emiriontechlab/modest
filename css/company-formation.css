@@ -1764,3 +1764,259 @@
     .cf-photo-fit .cf-features__img-card img,
     .cf-photo-fit .cf-docs__img-card img { height: auto; }
 }
+
+/* ==========================================================================
+   SHARE TRANSFERS PAGE — new utility classes
+   ========================================================================== */
+
+/* Hero: chip tags (we handle the paperwork / online or in-person) */
+.cf-hero__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 14px 0 16px;
+}
+.cf-hero__chip {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.22);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 5px 14px;
+    border-radius: 100px;
+    white-space: nowrap;
+}
+
+/* Section intro paras (under H2, directly visible) */
+.section-header__intro,
+.cf-benefits__intro,
+.cf-features__intro,
+.cf-docs__intro {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-body);
+    margin: 10px 0 28px;
+    max-width: 760px;
+}
+.section-header.center .section-header__intro {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+/* Trust section intro */
+.cf-trust__intro {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-body);
+    margin: 8px 0 32px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.cf-trust__badge-link {
+    display: block;
+    font-size: 13px;
+    color: var(--brand-red);
+    text-decoration: none;
+    margin-top: 4px;
+}
+.cf-trust__badge-link:hover { text-decoration: underline; }
+
+/* Transfer types: note and badge below the cards */
+.cf-process__note {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin: 28px 0 16px;
+    text-align: center;
+}
+.cf-process__note a { color: var(--brand-red); }
+.cf-process__badge {
+    text-align: center;
+    margin-top: 8px;
+}
+.cf-badge {
+    display: inline-block;
+    background: #f0f4ff;
+    color: var(--brand-navy);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 100px;
+    border: 1px solid rgba(9,14,45,0.1);
+}
+
+/* Reviews: google link replacing star rating */
+.cf-reviews__google-link {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--brand-red);
+    text-decoration: none;
+    margin-top: 6px;
+}
+.cf-reviews__google-link:hover { text-decoration: underline; }
+
+/* Bottom CTA reply time note */
+.cf-reply-note {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    margin: 8px 0 24px;
+}
+
+@media (max-width: 768px) {
+    .cf-hero__chip { font-size: 12px; padding: 4px 12px; }
+    .section-header__intro,
+    .cf-benefits__intro,
+    .cf-features__intro,
+    .cf-docs__intro { font-size: 15px; }
+    .cf-trust__intro { font-size: 14px; text-align: left; }
+}
+
+@media (max-width: 480px) {
+    .cf-hero__chips { gap: 6px; }
+    .cf-hero__chip { font-size: 11px; padding: 4px 10px; }
+    .cf-process__note { font-size: 13px; }
+}
+
+/* ==========================================================================
+   SINGLE-IMAGE VARIANT  (.cf-features--single-img / .cf-docs--single-img)
+   Problem: the base grid uses align-items:stretch + flex:1/height:100% on
+   the card, making the image fill the full height of a very tall text column.
+   The perspective() transforms then cause visual overflow outside the cell.
+   Fix: constrain the image column to its natural size only, kill all
+   transforms on these cards, prevent any overflow.
+   ========================================================================== */
+
+/* ── Section 5 — What is included ─────────────────────────── */
+
+.cf-features--single-img .cf-features__grid {
+    grid-template-columns: 1fr 1fr;  /* equal columns — image gets real width */
+    align-items: start;              /* columns size to their own content     */
+    gap: 56px;
+}
+
+/* Image wrapper: contained, no overflow */
+.cf-features--single-img .cf-features__image {
+    align-self: start;
+    overflow: hidden;   /* hard clip — nothing escapes this box */
+    position: static;  /* no sticky, no absolute */
+    width: 100%;
+}
+
+/* Stack: natural height only */
+.cf-features--single-img .cf-features__img-stack {
+    height: auto;
+    flex: none;
+    display: block;    /* drop flex so no child stretching */
+    position: static;
+}
+
+/* Card: no transform, no flex-grow, full width of its column */
+.cf-features--single-img .cf-features__img-card {
+    flex: none;
+    width: 100%;
+    min-height: 0;
+    transform: none !important;      /* kill the perspective tilt */
+    transition: box-shadow 0.4s ease;
+    box-shadow: 0 8px 32px rgba(9,14,45,0.18);
+}
+.cf-features--single-img .cf-features__img-card:hover {
+    transform: none !important;
+    box-shadow: 0 16px 48px rgba(9,14,45,0.24);
+}
+
+/* Image: natural 4:3, fills full column width */
+.cf-features--single-img .cf-features__img-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transform: none;  /* no hover scale-out-of-bounds */
+    transition: none;
+}
+.cf-features--single-img .cf-features__img-card:hover img {
+    transform: scale(1.03);
+    transition: transform 0.6s ease;
+}
+
+/* ── Section 8 — Documents required ───────────────────────── */
+
+.cf-docs--single-img .cf-docs__grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 56px;
+}
+
+.cf-docs--single-img .cf-docs__image {
+    align-self: start;
+    overflow: hidden;
+    position: static;
+    width: 100%;
+}
+
+.cf-docs--single-img .cf-docs__img-stack {
+    height: auto;
+    flex: none;
+    display: block;
+    position: static;
+}
+
+.cf-docs--single-img .cf-docs__img-card {
+    flex: none;
+    width: 100%;
+    min-height: 0;
+    transform: none !important;
+    transition: box-shadow 0.4s ease;
+    box-shadow: 0 8px 32px rgba(9,14,45,0.18);
+}
+.cf-docs--single-img .cf-docs__img-card:hover {
+    transform: none !important;
+    box-shadow: 0 16px 48px rgba(9,14,45,0.24);
+}
+
+.cf-docs--single-img .cf-docs__img-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transform: none;
+    transition: none;
+}
+.cf-docs--single-img .cf-docs__img-card:hover img {
+    transform: scale(1.03);
+    transition: transform 0.6s ease;
+}
+
+/* Help box: static under the image, never on top of content */
+.cf-docs--single-img .cf-docs__help-box {
+    position: static;
+    background: var(--brand-navy);
+    padding: 22px 24px 24px;
+    border-radius: 0 0 22px 22px;
+}
+
+/* ── Tablet ≤1024px: single column, image above content ─────── */
+@media (max-width: 1024px) {
+    .cf-features--single-img .cf-features__grid,
+    .cf-docs--single-img .cf-docs__grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+}
+
+/* ── Mobile ≤480px: full-width, slightly taller crop ─────────── */
+@media (max-width: 480px) {
+    .cf-features--single-img .cf-features__img-card img,
+    .cf-docs--single-img .cf-docs__img-card img {
+        aspect-ratio: 3 / 2;
+    }
+}
