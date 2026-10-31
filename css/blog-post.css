@@ -474,6 +474,64 @@
 }
 
 /* --------------------------------------------------------------------------
+   Author Bio — Card variant (written-by style)
+   -------------------------------------------------------------------------- */
+.author-bio-box--card {
+    display: block;
+    padding: 28px 28px 24px;
+}
+.author-bio-box__header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-light, #e8eaf0);
+}
+.author-bio-box__avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 3px solid var(--brand-navy);
+}
+.author-bio-box__header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.author-bio-box__label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+.author-bio-box__name {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-h1);
+    margin: 0;
+}
+.author-bio-box__role {
+    font-size: 13px;
+    color: var(--brand-red);
+    font-weight: 600;
+    margin: 0;
+}
+.author-bio-box__body {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin: 0;
+}
+@media (max-width: 500px) {
+    .author-bio-box--card { padding: 20px; }
+    .author-bio-box__avatar { width: 58px; height: 58px; }
+}
+
+/* --------------------------------------------------------------------------
    Sidebar TOC list links
    -------------------------------------------------------------------------- */
 .toc-list a {

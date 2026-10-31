@@ -76,6 +76,87 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+    <style>
+        /* Sidebar: author card — card layout */
+        .author-sidebar-card {
+            background: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            padding: 20px 20px 18px;
+            margin-bottom: 24px;
+            border-top: 4px solid var(--brand-navy);
+        }
+        .author-sidebar-card__header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #e8eaf0;
+            margin-bottom: 14px;
+        }
+        .author-sidebar-card__avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 3px solid var(--brand-navy);
+        }
+        .author-sidebar-card__header-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .author-sidebar-card__label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+        .author-sidebar-card__name {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-h1);
+            margin: 0;
+            line-height: 1.3;
+        }
+        .author-sidebar-card__role {
+            font-size: 12px;
+            color: var(--brand-red);
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        .author-sidebar-card__bio {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin: 0 0 14px;
+        }
+        .author-sidebar-card .social-links-inline {
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+        }
+        .author-sidebar-card .social-links-inline a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--bg-alt);
+            color: var(--brand-navy);
+            font-size: 13px;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+        }
+        .author-sidebar-card .social-links-inline a:hover {
+            background: var(--brand-navy);
+            color: #fff;
+        }
+    </style>
+
     <!-- ========================================= -->
     <!-- SCHEMA — Article -->
     <!-- ========================================= -->
@@ -214,12 +295,14 @@
 
                 <div class="article-meta">
                     <div class="author-mini">
-                        <div class="author-avatar-placeholder" aria-hidden="true">MS</div>
                         <div>
-                            <strong itemprop="author">Mohmed Sahal</strong>
+                            <strong itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <span itemprop="name">By Modest Consulting Services</span>
+                            </strong>
                             <span class="date">
-                                <time datetime="2026-09-06">Sep 6, 2026</time>
-                                &nbsp;&bull;&nbsp; 8 min read
+                                Reviewed by Mohmed Sahal &middot;
+                                <time datetime="2026-09-06" itemprop="datePublished">Published Sep 6, 2026</time>
+                                &middot; Updated Sep 6, 2026
                             </span>
                         </div>
                     </div>
@@ -561,13 +644,22 @@
                 </div>
 
                 <!-- ===== AUTHOR BIO ===== -->
-                <div class="author-bio-box" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                    <div class="author-avatar-placeholder author-avatar-lg" aria-hidden="true">MS</div>
-                    <div class="bio-text">
-                        <h4 itemprop="name">Mohmed Sahal</h4>
-                        <p class="role" itemprop="jobTitle">Client Relation Executive — Modest Consulting Services FZE</p>
-                        <p>Mohmed specialises in guiding clients through share transfers, company formation, and corporate restructuring across all UAE jurisdictions.</p>
+                <div class="author-bio-box author-bio-box--card" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <div class="author-bio-box__header">
+                        <img
+                            src="../images/team-member-1.webp"
+                            alt="Mohmed Sahal — Client Relation Executive at Modest Consulting Services"
+                            class="author-bio-box__avatar"
+                            width="72" height="72"
+                            loading="lazy"
+                        >
+                        <div class="author-bio-box__header-text">
+                            <span class="author-bio-box__label">WRITTEN BY</span>
+                            <h4 class="author-bio-box__name" itemprop="name">Mohmed Sahal</h4>
+                            <p class="author-bio-box__role" itemprop="jobTitle">Client Relation Executive — Modest Consulting Services FZE</p>
+                        </div>
                     </div>
+                    <p class="author-bio-box__body">Mohmed specialises in guiding clients through share transfers, company formation, and corporate restructuring across all UAE jurisdictions.</p>
                 </div>
 
             </article>
@@ -575,6 +667,45 @@
 
             <!-- ========= SIDEBAR ========= -->
             <aside class="sidebar sticky-sidebar" aria-label="Article sidebar">
+
+                <!-- Author Card — top of sidebar -->
+                <div class="author-sidebar-card">
+                    <div class="author-sidebar-card__header">
+                        <img
+                            src="../images/team-member-1.webp"
+                            alt="Mohmed Sahal — Client Relation Executive at Modest Consulting Services"
+                            class="author-sidebar-card__avatar"
+                            width="64" height="64"
+                            loading="lazy"
+                        >
+                        <div class="author-sidebar-card__header-text">
+                            <span class="author-sidebar-card__label">WRITTEN BY</span>
+                            <h4 class="author-sidebar-card__name">Mohmed Sahal</h4>
+                            <span class="author-sidebar-card__role">Client Relation Executive — Modest Consulting Services FZE</span>
+                        </div>
+                    </div>
+                    <p class="author-sidebar-card__bio">Mohmed specialises in guiding clients through share transfers, company formation, and corporate restructuring across all UAE jurisdictions.</p>
+                    <div class="social-links-inline">
+                        <a href="https://www.linkedin.com/company/modest-consulting-services-fze/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.instagram.com/modestconsultingservices" target="_blank" rel="noopener" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="categories-widget">
+                    <h3>Categories</h3>
+                    <ul class="categories-list">
+                        <li><a href="/company-formation">Company Formation <span>&#8594;</span></a></li>
+                        <li><a href="/share-transfers">Share Transfers <span>&#8594;</span></a></li>
+                        <li><a href="/vat-registration-filing">VAT &amp; Tax <span>&#8594;</span></a></li>
+                        <li><a href="/pro-government-services">Visas &amp; PRO Services <span>&#8594;</span></a></li>
+                        <li><a href="/accounting-bookkeeping">Accounting &amp; Bookkeeping <span>&#8594;</span></a></li>
+                    </ul>
+                </div>
 
                 <!-- Desktop TOC -->
                 <div class="widget toc-widget desktop-only" role="navigation" aria-label="Table of contents">
