@@ -13,6 +13,8 @@
     { "source": "/company-liquidation.html",                            "destination": "/company-liquidation",                                 "statusCode": 301 },
     { "source": "/business-licensing.html",                             "destination": "/business-licensing",                                  "statusCode": 301 },
     { "source": "/registration-amendments.html",                        "destination": "/registration-amendments",                             "statusCode": 301 },
+    { "source": "/registration-amendners",                                     "destination": "/registration-amendments",                             "statusCode": 301 },
+    { "source": "/registration-amendners.html",                                "destination": "/registration-amendments",                             "statusCode": 301 },
     { "source": "/share-transfers.html",                                "destination": "/share-transfers",                                     "statusCode": 301 },
 
     { "source": "/accounting-bookkeeping.html",                         "destination": "/accounting-bookkeeping",                              "statusCode": 301 },
@@ -24,7 +26,9 @@
     { "source": "/pro-government-services.html",                        "destination": "/pro-government-services",                             "statusCode": 301 },
     { "source": "/pcfc-trakhees-services.html",                         "destination": "/pcfc-trakhees-services",                              "statusCode": 301 },
     { "source": "/other-services.html",                                 "destination": "/other-services",                                      "statusCode": 301 },
-    { "source": "/service-template.html",                               "destination": "/service-template",                                    "statusCode": 301 },
+    { "source": "/services.html",                                              "destination": "/services",                                            "statusCode": 301 },
+    { "source": "/service-template.html",                                      "destination": "/services",                                            "statusCode": 301 },
+    { "source": "/service-template",                                           "destination": "/services",                                            "statusCode": 301 },
 
     { "source": "/blog.html",                                           "destination": "/blog",                                                "statusCode": 301 },
 
@@ -34,8 +38,7 @@
 
     { "source": "/service-individual.html",                             "destination": "/",                                                    "statusCode": 301 },
     { "source": "/service-individual",                                  "destination": "/",                                                    "statusCode": 301 },
-    { "source": "/service",                                             "destination": "/",                                                    "statusCode": 301 },
-    { "source": "/services",                                            "destination": "/service-template",                                    "statusCode": 301 },
+    { "source": "/service",                                                    "destination": "/services",                                            "statusCode": 301 },
 
     { "source": "/blog-post.html",                                      "destination": "/company-formation",                                   "statusCode": 301 },
     { "source": "/blog-post",                                           "destination": "/company-formation",                                   "statusCode": 301 },
