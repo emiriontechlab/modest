@@ -1900,8 +1900,12 @@
     gap: 56px;
 }
 
-/* Image wrapper: contained, no overflow */
+/* Image wrapper: contained, no overflow.
+   display:block drops the base flex container: inside it the stack's
+   flex:none sized it to the image's intrinsic width (e.g. 1450px), so the
+   column clipped the image instead of scaling it down. */
 .cf-features--single-img .cf-features__image {
+    display: block;
     align-self: start;
     overflow: hidden;   /* hard clip — nothing escapes this box */
     position: static;  /* no sticky, no absolute */
@@ -1955,6 +1959,7 @@
 }
 
 .cf-docs--single-img .cf-docs__image {
+    display: block;     /* same flex-sizing fix as the features image above */
     align-self: start;
     overflow: hidden;
     position: static;
