@@ -1714,7 +1714,8 @@
 }
 
 @media (max-width: 480px) {
-    .cf-hero .cf-hero__grid { padding-left: 0; }
+    /* margin-left:auto re-centres the 90% container so the text keeps a side gutter */
+    .cf-hero .cf-hero__grid { padding-left: 0; margin-left: auto; }
     .cf-hero .btn-group .btn { width: 100%; text-align: center; }
     .cf-process__cta .btn { width: 100%; text-align: center; }
     .cf-after-note { padding: 18px; }
@@ -2024,4 +2025,12 @@
     .cf-docs--single-img .cf-docs__img-card img {
         aspect-ratio: 3 / 2;
     }
+}
+
+/* 3:2 images in the single-image variant (e.g. 1200x800 artwork):
+   show the full frame instead of cropping it to 4:3. Kept last so it
+   wins over the 4:3 default and the 480px rule above. */
+.cf-img-3x2 .cf-features__img-card img,
+.cf-img-3x2 .cf-docs__img-card img {
+    aspect-ratio: 3 / 2;
 }
