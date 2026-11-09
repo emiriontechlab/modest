@@ -53,6 +53,11 @@ function applyLeadLinks() {
         a.target = '_blank';
         a.rel = 'noopener';
     });
+    document.querySelectorAll('a[href*="wa.me/971564023174"]').forEach(a => {
+        a.href = 'https://wa.me/971564023174?text=' + enc(waText);
+        a.target = '_blank';
+        a.rel = 'noopener';
+    });
 
     const subject = `Website Enquiry – ${label} – ${LEAD_SITE}`;
     const body = `Hi Modest Consulting Services, I'm contacting you from your website ${LEAD_SITE} (${pageName}) about ${service}. My requirement is: `;
