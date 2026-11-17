@@ -49,12 +49,16 @@ function applyLeadLinks() {
 
     const waText = `Hi Modest Consulting Services, I found you on your website ${LEAD_SITE} (${pageName}). I'm interested in ${service}. Please share the details.`;
     document.querySelectorAll('a[href*="wa.me/971564045802"]').forEach(a => {
-        a.href = 'https://wa.me/971564045802?text=' + enc(waText);
+        if (!a.getAttribute('href') || !a.getAttribute('href').includes('?text=')) {
+            a.href = 'https://wa.me/971564045802?text=' + enc(waText);
+        }
         a.target = '_blank';
         a.rel = 'noopener';
     });
     document.querySelectorAll('a[href*="wa.me/971564023174"]').forEach(a => {
-        a.href = 'https://wa.me/971564023174?text=' + enc(waText);
+        if (!a.getAttribute('href') || !a.getAttribute('href').includes('?text=')) {
+            a.href = 'https://wa.me/971564023174?text=' + enc(waText);
+        }
         a.target = '_blank';
         a.rel = 'noopener';
     });
