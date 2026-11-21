@@ -32,6 +32,8 @@
 
     { "source": "/blog.html",                                           "destination": "/blog",                                                "statusCode": 301 },
 
+    { "source": "/blog/trakhees-approval-process.html",                 "destination": "/blog/trakhees-approval-process",                      "statusCode": 301 },
+    { "source": "/blog/company-formation-uae.html",                     "destination": "/blog/company-formation-uae",                          "statusCode": 301 },
     { "source": "/blog/how-to-close-a-uae-company.html",               "destination": "/blog/how-to-close-a-uae-company",                     "statusCode": 301 },
     { "source": "/blog/mainland-vs-free-zone-vs-offshore-uae.html",    "destination": "/blog/mainland-vs-free-zone-vs-offshore-uae",          "statusCode": 301 },
     { "source": "/blog/transferring-company-shares-in-uae-legal-process.html", "destination": "/blog/transferring-company-shares-in-uae-legal-process", "statusCode": 301 },

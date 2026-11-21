@@ -126,4 +126,22 @@
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
+    <url>
+        <loc>https://modest-uae.ae/blog/how-to-close-a-uae-company</loc>
+        <lastmod>2026-11-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://modest-uae.ae/blog/company-formation-uae</loc>
+        <lastmod>2026-11-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://modest-uae.ae/blog/trakhees-approval-process</loc>
+        <lastmod>2026-11-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
 </urlset>
