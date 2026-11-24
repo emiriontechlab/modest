@@ -142,4 +142,5 @@ function initFooterScripts() {
     // Lets js/script.js (lead tracking) know the header/footer links now exist
     window.componentsReady = true;
     window.dispatchEvent(new Event('componentsLoaded'));
+    if (typeof applyLeadLinks === 'function') applyLeadLinks();
 })();
